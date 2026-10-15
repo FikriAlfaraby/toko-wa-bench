@@ -5,7 +5,10 @@ the agent said, the arguments the agent passed to tools and what the tools retur
 notes, the quotes in the review) with an English line, or with null for a line that has no
 Indonesian in it. `problems` checks that a gloss says the same thing: no Indonesian left; every
 number with its unit, every order, item and promo code, and every name the shop's data knows kept;
-line breaks and length about the same. These checks cannot see every change of meaning (which item
+line breaks and length about the same; the English runs to the end of the line; and the meaning
+words keep their meaning: a day of the week, a "not", a question or a statement, the time of day in
+a greeting or an hour. These checks cannot
+see every change of meaning (which item
 a number belongs to, a place the shop's data does not know), so the lines a finding rests on are
 also pinned by hand in tests/test_glosses.py. The agents never see a gloss; nothing in the domain
 reads the file.
@@ -17,6 +20,7 @@ import re
 from decimal import Decimal
 from pathlib import Path
 
+from toko_wa import meaning
 from toko_wa.context import NOTE_HEADER
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -173,6 +177,8 @@ def problems(line: str, gloss: str | None, keep: list[str]) -> list[str]:
     shape = _json_problem(line, gloss)
     if shape:
         found.append(shape)
+    else:
+        found += meaning.problems(line, gloss)
     low, high = (0.65, 2.0) if len(line) >= 80 else (0.4, 2.5)
     if len(line) >= 40 and not low <= len(gloss) / len(line) <= high:
         found.append(f"the gloss is {len(gloss)} characters for a line of {len(line)}")

@@ -32,6 +32,10 @@ rb = ribu, jt = juta, pcs = pieces); some are Sundanese or Javanese.
 Translate each line into natural English that says exactly what the line says: the same facts,
 requests and tone (casual stays casual). Do not add, explain or leave out anything: a short
 confirmation inside a line ("detailnya sesuai", the details are right) stays in the English.
+Translate every line to its end: the last sentence and its question mark stay.
+Keep every statement a statement, every request a request and every question a question: "ganti L
+aja kak" = "make it an L instead" (a request, not "can you change it?"). Add "okay?" or "right?"
+only for a ya, nya or kan the line ends a sentence with, never for a form of address such as kak.
 
 Words of this shop:
 - "item" next to a colour or a product means black (slang for hitam); "abu" or "abu-abu" is grey.
@@ -167,7 +171,8 @@ def save(glosses: dict[str, str | None], model: str, order: list[str]) -> None:
     data = {
         "about": "English glosses for readers of the replay. The agents saw only the original lines. "
         "Written by scripts/gloss.py with the model below and checked by tests/test_glosses.py: "
-        "no Indonesian left, every number, ID, code and name kept. "
+        "no Indonesian left; every number, ID, code and name kept; days, nots, questions and times of "
+        "day kept. "
         "null: the line is English already.",
         "model": model,
         "glosses": {line: glosses[line] for line in order if line in glosses},

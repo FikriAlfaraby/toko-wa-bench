@@ -62,6 +62,33 @@ def test_a_line_has_a_gloss_exactly_when_it_has_indonesian_in_it():
             "Okay, I checked ORD-1003 at J&T Bandung on the 11th.",
             "characters for a line of",
         ),
+        # meaning the numbers cannot see: a day, a not, a question, the time of day
+        ("Sabtu bisa dikirim kak?", "Can it be shipped on Sunday?", "Saturday is missing"),
+        ("jangan dikirim dulu ya kak", "Ship it first, okay?", "the line says not"),
+        ("stoknya belum ada kak", "It is in stock.", "the line says not"),
+        (
+            "Pesanannya sudah dikirim kok kak.",
+            "Has the order been shipped?",
+            "asks a question the line does not",
+        ),
+        (
+            "hoodie fleece hitam M kak, yg tadi 189rb kan?",
+            "The black hoodie in M, okay? It was 189k, right?",
+            "asks a question the line does not",
+        ),
+        # the English that stopped before the end of the agent's question
+        (
+            "Apakah mau saya teruskan ke admin toko, Kak?",
+            "Would you like me to pass this on to the shop's admin,",
+            "the line asks a question",
+        ),
+        ("Selamat pagi Kak, ada yang bisa dibantu?", "Good evening, how can I help?", "another time of day"),
+        ("Dikirim jam 7 malam ya kak", "It ships at 7 am.", "wrong half of the day"),
+        (
+            "Paketnya tertahan di gudang, saya teruskan ke admin ya.",
+            "The package is held at the warehouse,",
+            "stops before the end",
+        ),
     ],
 )
 def test_each_kind_of_wrong_gloss_is_caught(line, gloss, problem):
@@ -83,6 +110,32 @@ def test_each_kind_of_wrong_gloss_is_caught(line, gloss, problem):
         ("Pesanan ORD-1003 dikirim ke alamat C007-A1 ya.", "Order ORD-1003 will be sent to address C007-A1."),
         # a capitalised English name is not an Indonesian word
         ("Kirim ke Dan ya kak", "Send it to Dan, please."),
+        # how Indonesian chat asks without a "?": bisa ga, a choice with atau, a ya or Sundanese nya tag
+        ("mantap. free ongkir bisa ga kak sekalian", "Great. Can I get free shipping too?"),
+        ("warnanya abu muda atau tua kak", "Is the color light or dark grey?"),
+        (
+            "muhun kak, engké abdi transfer pas Rp71.570, tos nya.",
+            "Yes, I’ll transfer exactly Rp71.570 later, okay?",
+        ),
+        ("ada ga kak yg ukuran XL?", "Do you have it in XL?"),
+        # a not English says with another word, or without one
+        ("kode promo GRATIS tidak valid di sistem", "The GRATIS promo code is invalid in the system."),
+        (
+            "Jika ada hal lain, jangan ragu untuk chat kembali ya.",
+            "If there's anything else, feel free to chat again.",
+        ),
+        (
+            "Saya cek dulu supaya pesanannya tidak keliru.",
+            "I'll check first to make sure the order is correct.",
+        ),
+        # a question asking to confirm or choose, said as a request; one question with two marks
+        (
+            "Mohon konfirmasinya ya Kak, apakah pesanan ORD-1006 fix dibatalkan?",
+            "Please confirm whether order ORD-1006 should be canceled.",
+        ),
+        ("Kakak mau kurir apa ya? (JNE / J&T)?", "Which courier would you like? (JNE / J&T)"),
+        # Minggu ini is this week, not Sunday
+        ("Minggu ini bisa dikirim kak?", "Can it ship this week?"),
     ],
 )
 def test_a_right_gloss_passes(line, gloss):
@@ -122,6 +175,33 @@ def test_the_phrases_the_first_translation_misread_now_read_right():
             assert "detail" in low, gloss
         if re.search(r"\bkira-kira bisa", line, re.I):
             assert "approximately" not in low, gloss
+
+
+def test_the_lines_the_meaning_checks_caught_now_read_right():
+    # the agent's offer to hand the stuck parcel to the admin had lost its end ("…with the courier,")
+    handoff = [
+        line for line in GLOSSES if "apakah mau saya teruskan ke admin toko agar dibantu koordinasi" in line
+    ]
+    assert handoff and all(GLOSSES[line].rstrip().endswith("?") for line in handoff)
+    # "yg tadi" points back to a part of the chat the agent no longer sees
+    assert "earlier" in GLOSSES["hoodie fleece hitam M kak, yg tadi 189rb kan?"].lower()
+    # a request stays a request, and asks for what it asks for
+    assert (
+        "?"
+        not in GLOSSES[
+            "eh hoodie nya ganti L aja kak, M kekecilan kayanya, aku kemarin beli M di toko lain sempit"
+        ]
+    )
+    assert "colors" in GLOSSES["kemeja flanel juga dong kak warnanya"].lower()
+
+
+def test_the_readme_counts_the_glosses_edited_by_hand():
+    count = len(json.loads(GLOSSES_PATH.read_text(encoding="utf-8"))["corrected_by_hand"])
+    words = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]
+    readme = " ".join((ROOT / "README.md").read_text(encoding="utf-8").split())
+    assert f"{words[count]} translation{'' if count == 1 else 's'} were corrected by hand" in readme.replace(
+        "was corrected", "were corrected"
+    )
 
 
 def test_every_gloss_edited_by_hand_says_why_and_still_passes():

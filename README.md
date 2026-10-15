@@ -109,11 +109,19 @@ telecom tasks starts with an earlier chat history; five of these do.
   the chat, the notes, the text the agents passed to tools and what the tools returned. GPT-6 Luna
   wrote the English (`scripts/gloss.py`), and `tests/test_glosses.py` checks it. The check finds
   Indonesian left in the English. It also finds a number that changed with its unit, and a changed
-  order, item or promo code. A name in the shop's data that went missing is caught too. It cannot
-  tell which item a number belongs to, or whether a place outside the shop's data was changed. The
-  lines a finding rests on were therefore read and pinned by hand. One translation was corrected by
-  hand, and the file says why. The agents saw only the originals, and nothing in the domain reads
-  this file.
+  order, item or promo code. A name in the shop's data that went missing is caught too. So is a
+  change of meaning that keeps every number: a "not" lost or added (Sundanese and Javanese ones
+  too, and the ones English says with other words, like "jangan ragu", feel free), a statement
+  turned into a question or the reverse, a day of the week, tomorrow or yesterday, a time of day
+  or an hour, two of them swapped, a span of days or weeks, and English that stops before the end
+  of its line. Tool arguments and results in JSON are checked string by string. An independent
+  review then wrote wrong English meant to slip past these checks; its cases are tests now. Known
+  gaps: two nots in one sentence count as one; "kurang" (not enough) and a few other opposites are
+  not checked; and a short customer line such as "hoodie nya ready kak" (the hoodie's in stock?)
+  may be a question or a statement. It cannot tell which item a number belongs to, or whether a
+  place outside the shop's data was changed. The lines a finding rests on were therefore read and
+  pinned by hand. Six translations were corrected by hand, and the file says why for each. The
+  agents saw only the originals, and nothing in the domain reads this file.
 
 ## The tasks
 
