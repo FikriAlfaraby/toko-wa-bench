@@ -248,6 +248,51 @@ def test_wrong_english_is_caught(line, gloss, problem):
         ("totalnya jadi berapa kak", "So what's the total"),
         ("ini punya siapa", "Whose is this"),
         ("Pelanggan Bandung ke Bandung.", "The customer is from Bandung to Bandung."),
+        # real lines from the lead and booking projects, which the first audit flagged wrongly (16 Oct)
+        ("Sabtu, 17 Oktober 2026 jam 14.00 WIB", "Saturday, October 17, 2026 at 14.00 WIB"),
+        ("oke ditunggu, bs nego ga harganya?", "Okay, I'll wait. Can the price be negotiated?"),
+        (
+            "makasih gan, oiya kapan mau pindah masih blm pasti, liat2 dulu aja",
+            "Thanks. Oh, I'm still not sure when I want to move; I'm just looking around for now.",
+        ),
+        (
+            "weekend ini bisa, tp ga buru2 juga sih nyarinya, masih compare2",
+            "I can do this weekend, but I'm not in a hurry to"
+            " find one either. I'm still comparing a few options.",
+        ),
+        (
+            "tahun depan baru mau eksekusi, taun ini ngumpulin dana dulu",
+            "I'm planning to go ahead next year. This year I'm saving up first.",
+        ),
+        ("oh lumayan, ini beli ya bukan sewa", "Oh, not bad. This is for buying, not renting, right?"),
+        ("rumah tinggal", "house to live in"),
+        (
+            "Kak, saya mau lihat rumah yang di Cluster Anggrek BSD. Bisa Jumat besok jam 10 pagi? Saya Andi.",
+            "I'd like to see the house in Cluster Anggrek BSD. Can I"
+            " come tomorrow, Friday, at 10 in the morning? I'm Andi.",
+        ),
+        (
+            "Kak, rumah Cluster Anggrek BSD bisa dilihat kapan aja ya jadwal kosongnya?",
+            "When can I view the Cluster Anggrek BSD house? What slots are available?",
+        ),
+        (
+            "Sabtu, 17 Oktober jam 3 sore belum tersedia, Kak. Yang"
+            " masih kosong jam 2 siang. Mau saya booking jam 2?",
+            "Saturday, October 17 at 3 pm isn't available. The only"
+            " time still free is 2 pm. Would you like me to book 2 pm?",
+        ),
+        ("Yang masih kosong jam 2 siang", "What's still free is 2 pm"),
+        (
+            "Mohon maaf untuk Jumat jam 19.00 belum tersedia."
+            " Kalau berkenan di hari Sabtu, ada slot pukul 09.00.",
+            "Sorry, Friday at 19.00 isn't available. If Saturday works for you, there's a slot at 09.00.",
+        ),
+        (
+            "Di Cluster Anggrek No. 12 hari ini masih ada jadwal"
+            " kosong jam 11.00. Berminat di salah satu jam tersebut?",
+            "There's still an open slot at Cluster Anggrek No. 12"
+            " today at 11.00. Are you interested in any of those times?",
+        ),
     ],
 )
 def test_right_english_passes(line, gloss):

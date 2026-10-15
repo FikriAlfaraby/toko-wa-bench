@@ -10,7 +10,10 @@ from toko_wa.meaning.text import EMOJI, IC, STOP
 _ARTICLE_END = re.compile(
     r"\b(?:the|a|an|and|or|your|my|our|their|than|but|if|as|is|are|was|were|will|be)$", IC
 )
-_PREPOSITION_END = re.compile(r"\b(?:to|of|with|for|in|on|at|by|from|into)$", IC)
+# "…pass it to" stops short; "a house to live in" does not
+_PREPOSITION_END = re.compile(
+    r"\b(?:it|them|this|that|him|her|you|me|us)\s+(?:to|of|with|for|from|into)$", IC
+)
 _QUESTION_START = re.compile(r"(?:^|[.!?]\s+)(?:what|where|when|who|whom|whose|which|why|how)\b[^.!?]*$", IC)
 
 

@@ -163,7 +163,9 @@ PAIRS = [
     (
         r"\b(?:kalau|kalo|jika|bila)\s+berkenan\b",
         r"(?:don['’]t|do not) mind|if you(?:['’]d)? like|willing"
-        r"|if (?:it['’]s|that['’]s) (?:ok|okay|fine)|if you wish|please",
+        r"|if (?:it['’]s|that['’]s) (?:ok|okay|fine)|if you wish|please|works? for you|alternatively"
+        r"|suits? you"
+        r"|convenient",
         "the line says if you're willing (kalau berkenan) and the gloss does not",
     ),
     (
@@ -175,7 +177,7 @@ PAIRS = [
 # A not that only asks: "bisa ga dikirim" (can it be shipped?), "ada gak", "aya teu"; read so only
 # in a sentence that ends with "?" or with no mark. "udah transfer belum?" asks with its last word.
 ASKING_NOT = re.compile(
-    r"\b(?:bisa|bs|boleh|ada|aya|mau|ready)\s+(?:ga|gak|nggak|ngga|enggak|engga|gk|teu)\b", IC
+    r"\b(?:bisa|bs|boleh|ada|aya|mau|ready)\s+(?:\w+\s+)?(?:ga|gak|nggak|ngga|enggak|engga|gk|teu)\b", IC
 )
 _TAG_NOT = re.compile(
     rf"\b(?:belum|blm|belom|ga|gak|nggak|ngga|enggak|engga|gk|tidak|teu|bukan|bkn)(?:\s+(?:ya|sih|{ADDRESS}))*+\s*\?",
@@ -238,7 +240,7 @@ _EN_IDIOM = re.compile(
     r"\bno (?:problem|worries|need|rush|big deal|issue)\b|\bnot (?:at all"
     r"|a problem)\b|\bdon['’]t (?:hesitate|forget|worry|mention it)\b"
     r"|\bcan['’]t wait\b|\bnever ?mind\b|\bno (?:later|earlier"
-    r"|more|less|fewer) than\b|\bnot only\b|\bwhy not\b"
+    r"|more|less|fewer) than\b|\bnot only\b|\bwhy not\b|\bnot bad\b"
     r"|,\s*(?:is|was|are|were|do|does|did|wo|ca|have|has|had|should|would|could)n['’]t\s+(?:it|they|you|he|she|we|there|that)\b"
     r"|\b(?:and|or)\s+(?:no|not|never)\b|\bnor\b",
     IC,

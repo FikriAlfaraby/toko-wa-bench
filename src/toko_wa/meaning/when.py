@@ -2,7 +2,6 @@
 order, the time of day, an hour and its half of the day, and a span of days, weeks or hours."""
 
 import re
-from collections import Counter
 
 from toko_wa.meaning.text import IC, dedup, plain
 
@@ -58,7 +57,8 @@ _RELATIVE = [
 ]
 # Weeks, months and years before or after this one: the English names the same one.
 _SPANS_AROUND = [
-    ("this week", r"\b(?:minggu|pekan)\s+ini\b", r"\bthis week(?:end)?\b|these (?:past )?weeks"),
+    ("this week", r"\b(?:minggu|pekan)\s+ini\b", r"\bthis week\b|these (?:past )?weeks"),
+    ("this weekend", r"\b(?:weekend|wiken|akhir\s+pekan|akhir\s+minggu)\s+ini\b", r"\bthis weekend\b"),
     ("next week", r"\b(?:minggu|pekan)\s+depan\w*\b", r"\b(?:next|following|coming) week\b"),
     (
         "last week",
@@ -68,9 +68,13 @@ _SPANS_AROUND = [
     ("this month", r"\bbulan\s+ini\b", r"\bthis month\b"),
     ("next month", r"\bbulan\s+depan\b", r"\b(?:next|following|coming) month\b"),
     ("last month", r"\bbulan\s+(?:yang\s+)?(?:lalu|kemarin)\b", r"\b(?:last|previous|past) month\b"),
-    ("this year", r"\btahun\s+ini\b", r"\bthis year\b"),
-    ("next year", r"\btahun\s+depan\b", r"\b(?:next|following|coming) year\b"),
-    ("last year", r"\btahun\s+(?:yang\s+)?(?:lalu|kemarin)\b", r"\b(?:last|previous|past) year\b"),
+    ("this year", r"\b(?:tahun|taun|thn)\s+ini\b", r"\bthis year\b"),
+    ("next year", r"\b(?:tahun|taun|thn)\s+depan\b", r"\b(?:next|following|coming) year\b"),
+    (
+        "last year",
+        r"\b(?:tahun|taun|thn)\s+(?:yang\s+)?(?:lalu|kemarin)\b",
+        r"\b(?:last|previous|past) year\b",
+    ),
 ]
 _AM = r"\d\s*a\.?m\b"
 _PM = r"\d\s*p\.?m\b"
@@ -107,8 +111,9 @@ _UNITS = {
     "tahun": "year",
     "detik": "second",
 }
+# "3 hari", "2-3 hari", "1x24 jam" are spans; "2026 jam 14.00" is a date before a clock time
 _SPAN = re.compile(
-    r"(?<![\d·-])(\d+(?:\s*[-–x]\s*\d+)?)\s*(hari|minggu|bulan|jam|menit|tahun|detik)\b"
+    r"(?<![\d·.:-])(\d+(?:\s*[-–x]\s*\d+)?)\s*(hari|minggu|bulan|jam(?!\s*\d)|menit|tahun|detik)\b"
     r"|\b(beberapa|bbrp|satu|dua|tiga|empat|lima|enam|tujuh|sepuluh)\s+(hari|minggu|bulan|jam|menit|tahun|detik)\b"
     r"|\b(se)(hari|minggu|bulan|jam|menit|tahun)\b",
     IC,
@@ -180,8 +185,8 @@ def _which_one(day: str, said: str, meant: str, line: str, gloss: str) -> list[s
     flags = 0 if day == "Sunday" else IC
     after = [m.group(1) or "" for m in re.finditer(rf"(?:{said})(?:\s+(\w+))?", line, flags)]
     ahead = any(re.fullmatch(_NEXT, w, IC) for w in after)
-    # "Jumat depan" is next Friday, never this one; "Senin besok" may be this coming Monday
-    this_one = r"|this" if not any(re.fullmatch(r"depan\w*", w, IC) for w in after) else ""
+    # "Jumat depan" is next Friday, never this one; "Senin besok" may be this coming Monday, or tomorrow
+    this_one = r"|this|tomorrow,?" if not any(re.fullmatch(r"depan\w*", w, IC) for w in after) else ""
     behind = any(re.fullmatch(_LAST, w, IC) for w in after)
     found = []
     if re.search(rf"\b(?:next|coming|following)\s+(?:{meant})", gloss, IC) and not ahead:
@@ -212,11 +217,11 @@ def _relative(line: str, gloss: str) -> list[str]:
         ]
     for said, word in (
         (r"\b(?:kemarin|kemaren|kmrn|semalam|tadi malam)\b", "yesterday"),
-        (r"\b(?:besok|bsk|esok|lusa)\b", "tomorrow"),
+        (r"\b(?:besok|bsk|esok|lusa)\b", "tomorrow"),  # in the line as written: "Jumat besok" may be tomorrow
         (r"\blusa\b", "day after tomorrow"),
         (r"\bkemarin\s+lusa\b", "day before yesterday"),
     ):
-        if re.search(rf"\b{word}\b", gloss, IC) and not re.search(said, text, IC):
+        if re.search(rf"\b{word}\b", gloss, IC) and not re.search(said, line, IC):
             found.append(f"the gloss says {word} and the line does not")
     said_names = [n for _, n in sorted(said_order)]
     wrote_names = [n for _, n in sorted(wrote_order)]
@@ -295,11 +300,14 @@ def _hours(line: str, gloss: str) -> list[str]:
     ]
     found = []
     for hour in sorted({h for h, _ in written} & {h for h, _ in expected}):
-        want = Counter(half for h, half in expected if h == hour)
-        got = Counter(half for h, half in written if h == hour)
-        if any(n > want[half] for half, n in got.items()):
-            wrong = next(half for half, n in got.items() if n > want[half])
-            found.append(f"jam {hour} turned into the wrong half of the day ({wrong})")
+        want = {half for h, half in expected if h == hour}
+        got = {half for h, half in written if h == hour}
+        if got - want:
+            found.append(f"jam {hour} turned into the wrong half of the day ({sorted(got - want)[0]})")
+        elif want - got:
+            found.append(
+                f"jam {hour} turned into the wrong half of the day (its {sorted(want - got)[0]} is missing)"
+            )
     if (
         not found
         and len(said_order) >= 2
@@ -312,7 +320,9 @@ def _hours(line: str, gloss: str) -> list[str]:
 
 def _spans(line: str, gloss: str) -> list[str]:
     said, wrote = [], []
-    for groups in _SPAN.findall(line):
+    # "salah satu jam" is one of the times, "No. 12 hari ini" a house number before today
+    text = re.sub(r"\bsalah\s+satu\b|\b(?:No|Blok|Km|Lt|Kav)[·.]?\s*\d+\w*", " ", plain(line), flags=IC)
+    for groups in _SPAN.findall(text):
         number, unit = next((groups[i], groups[i + 1]) for i in (0, 2, 4) if groups[i + 1])
         said.append(
             (_WORD_NUMBER.get(number.lower(), re.sub(r"\s*[-–]\s*", "-", number)), _UNITS[unit.lower()])

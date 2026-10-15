@@ -12,7 +12,7 @@ QUESTION_WORD = re.compile(
     r"\b(?:berapa|brp|kapan|kpn|gimana|gmn|bagaimana|apakah|kenapa|knp|mengapa|dimana|di mana|kemana|mana"
     r"|siapa|sapa|apa(?![-\s]*(?:apa|aja|saja|pun|adanya|lagi)\b)|sabaraha|naon|iraha|kumaha|saha|piro|opo|endi|pundi)\b"
     rf"|\bapa\s+(?:aja|saja)(?:\s+(?:ya|sih|skrg|sekarang|{ADDRESS}))*+\s*$|^masa\b|\bkan\b"
-    rf"|\b{_GA}(?:\s+(?:sih|ya|{ADDRESS}))*+\s*$|\b(?:ga|gak|nggak)\s+(?:yg|yang|sih)\b",
+    rf"|\b{_GA}(?:\s+(?:sih|ya|{ADDRESS}))*+\s*$|\b(?:ga|gak|nggak)\s+(?:yg|yang|sih)\b|\bya\s+bukan\b",
     IC,
 )
 # The question words and forms a line cannot drop: an English line for "bisa COD ga kak" must ask.
@@ -26,7 +26,10 @@ _PLAIN_QUESTION = re.compile(
 # A question word inside a statement: "menanyakan apakah …" (asks whether …).
 _EMBEDDED = re.compile(
     r"\b(?:menanyakan|nanya|tanya|bertanya|mengecek|cek|memastikan|pastikan|tahu|tau|lihat|liat|konfirmasi)\b.*"
-    r"\b(?:apakah|berapa|brp|kapan|bagaimana|gimana|siapa|dimana|di mana|apa)\b",
+    r"\b(?:apakah|berapa|brp|kapan|bagaimana|gimana|siapa|dimana|di mana|apa)\b"
+    # "kapan mau pindah masih blm pasti" (when I'll move isn't decided)
+    r"|\b(?:kapan|berapa|gimana|bagaimana|siapa|dimana|di mana)\b.*"
+    r"\b(?:belum|blm|masih)\s+(?:pasti|tahu|tau|jelas|yakin|tentu)\b",
     IC,
 )
 # "kok blm nyampe" (why hasn't it arrived): a question even before a full stop; "ga lama kok" only stresses.
@@ -106,9 +109,11 @@ def _must_ask(body: str, end: str) -> bool:
 def questions(line: str, gloss: str) -> list[str]:
     said = sentences(NOT_IDIOM.sub(" ", line))
     # an English question the writer left without "?" ("What is your name") still asks
-    wrote = [(body, "?" if not end and _EN_ASKING.search(body) else end) for body, end in sentences(gloss)]
+    marked = sentences(gloss)
+    wrote = [(body, "?" if not end and _EN_ASKING.search(body) else end) for body, end in marked]
     asked = sum(end == "?" for _, end in said)
     asks = sum(end == "?" for _, end in wrote)
+    asks_marked = sum(end == "?" for _, end in marked)  # only a "?" counts as adding a question
     found = []
     requests_said = sum(
         (end == "?" or _must_ask(body, end)) and bool(_LINE_REQUEST.search(body)) for body, end in said
@@ -127,9 +132,12 @@ def questions(line: str, gloss: str) -> list[str]:
     )
     # one question the English says in two: "Bagaimana Kak, apakah mau lanjut?" (What do you think? Go ahead?)
     split = sum(
-        sum(
-            bool(QUESTION_WORD.search(c) or ASKING_NOT.search(c) or _ENDS_TAG.search(c))
-            for c in clauses(body)[:-1]
+        max(
+            sum(
+                bool(QUESTION_WORD.search(c) or ASKING_NOT.search(c) or _ENDS_TAG.search(c))
+                for c in clauses(body)[:-1]
+            ),
+            int(bool(_PLAIN_QUESTION.search(body))),
         )
         for body, end in said
         if end == "?"
@@ -142,6 +150,6 @@ def questions(line: str, gloss: str) -> list[str]:
         sum(end != "?" and bool(_LINE_ASKS_LEAVE.search(body)) for body, end in said),
         sum(end == "?" and bool(_EN_POLITE_ME.search(body)) for body, end in wrote),
     )
-    if asks - asked > unmarked + min(tags, tag_questions) + choices + split + polite:
+    if asks_marked - asked > unmarked + min(tags, tag_questions) + choices + split + polite:
         found.append("the gloss asks a question the line does not")
     return found
