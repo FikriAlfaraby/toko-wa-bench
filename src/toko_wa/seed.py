@@ -258,7 +258,18 @@ CUSTOMERS = [
                 "Jakarta Selatan",
                 "DKI Jakarta",
                 "12750",
-            )
+            ),
+            addr(
+                "C005",
+                2,
+                "Rumah Mama",
+                "Hj. Wartini",
+                "Jl. Kemang Pratama Raya No. 18",
+                "Rawalumbu",
+                "Bekasi",
+                "Jawa Barat",
+                "17116",
+            ),
         ],
     ),
     customer(
@@ -517,7 +528,7 @@ def build() -> TokoDB:
             "2026-10-15 06:15 Tiba di gudang JNE Yogyakarta",
         ],
     )
-    # C002 Dimas: shipped on the 11th, stuck in transit since the 12th
+    # C002 Dimas: shipped on the 11th, stuck in transit since the evening of the 11th
     o = order(at(10, 19), "C002", [("JK-HTM-L", 1)], "J&T", "transfer_bri", paid_at=at(10, 19, 40))
     ship(
         o,
@@ -525,8 +536,8 @@ def build() -> TokoDB:
         "JT0200000201",
         [
             "2026-10-11 14:30 Paket diterima di drop point J&T Bandung",
-            "2026-10-12 02:10 Transit di gateway Bandung",
-            "2026-10-12 09:45 Paket tertahan di gateway, menunggu jadwal berikutnya",
+            "2026-10-11 18:10 Transit di gateway Bandung",
+            "2026-10-11 21:45 Paket tertahan di gateway, menunggu jadwal berikutnya",
         ],
     )
     # C003 Sari: unpaid order to her home in Surabaya

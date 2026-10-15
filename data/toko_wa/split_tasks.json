@@ -1,4 +1,37 @@
 {
- "base": ["smoke-01"],
- "smoke": ["smoke-01"]
+ "base": [
+  "ts-01",
+  "ts-02",
+  "ts-03",
+  "ts-04",
+  "lc-01",
+  "lc-02",
+  "lc-03",
+  "lc-04",
+  "ot-01",
+  "ot-02",
+  "ot-03",
+  "ot-04"
+ ],
+ "topic_switch": [
+  "ts-01",
+  "ts-02",
+  "ts-03",
+  "ts-04"
+ ],
+ "long_context": [
+  "lc-01",
+  "lc-02",
+  "lc-03",
+  "lc-04"
+ ],
+ "other": [
+  "ot-01",
+  "ot-02",
+  "ot-03",
+  "ot-04"
+ ],
+ "smoke": [
+  "smoke-01"
+ ]
 }

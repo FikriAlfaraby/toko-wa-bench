@@ -107,6 +107,16 @@
      "city": "Jakarta Selatan",
      "province": "DKI Jakarta",
      "postal_code": "12750"
+    },
+    {
+     "address_id": "C005-A2",
+     "label": "Rumah Mama",
+     "recipient": "Hj. Wartini",
+     "street": "Jl. Kemang Pratama Raya No. 18",
+     "district": "Rawalumbu",
+     "city": "Bekasi",
+     "province": "Jawa Barat",
+     "postal_code": "17116"
     }
    ],
    "default_address_id": "C005-A1",
@@ -1026,8 +1036,8 @@
     "tracking_number": "JT0200000201",
     "events": [
      "2026-10-11 14:30 Paket diterima di drop point J&T Bandung",
-     "2026-10-12 02:10 Transit di gateway Bandung",
-     "2026-10-12 09:45 Paket tertahan di gateway, menunggu jadwal berikutnya"
+     "2026-10-11 18:10 Transit di gateway Bandung",
+     "2026-10-11 21:45 Paket tertahan di gateway, menunggu jadwal berikutnya"
     ]
    },
    "payment_method": "transfer_bri",

@@ -47,7 +47,7 @@ def test_task_ids_are_unique_and_every_split_names_real_tasks():
     assert len(ids) == len(set(ids))
     for name, members in get_tasks_split().items():
         assert set(members) <= set(ids), name
-    assert set(get_tasks_split()["base"]) == set(ids)
+    assert set(get_tasks_split()["base"]) == {i for i in ids if not i.startswith("smoke")}
 
 
 @pytest.mark.parametrize("task", TASKS, ids=[t.id for t in TASKS])
