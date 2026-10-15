@@ -1,0 +1,36 @@
+[
+ {
+  "id": "smoke-01",
+  "description": {
+   "purpose": "Smoke test: a plain order with a stock question and ongkir, in WhatsApp Indonesian.",
+   "relevant_policies": "Mengenali pelanggan; Sebelum mengubah data; Ongkir; Pembayaran",
+   "notes": "Total = 189000 + 9000 ongkir (600 g = 1 kg, Bandung JNE) + kode unik 570 (ORD-1010)."
+  },
+  "user_scenario": {
+   "persona": "Agus Setiawan, 34, lives in Antapani, Bandung. Types fast on his phone, short messages.",
+   "instructions": {
+    "domain": "toko_wa",
+    "reason_for_call": "You want one black hoodie (Jaket Hoodie Fleece) in size L. First ask whether it is ready and how much the ongkir is to your house. If it is in stock, order 1, sent with JNE to your usual address, paid by BCA transfer. When the agent reads the order back, say yes.",
+    "known_info": "You are chatting from your own WhatsApp number. You live in Antapani, Bandung; the shop already has your address.",
+    "unknown_info": "You do not know the price or the ongkir.",
+    "task_instructions": "Write the way Indonesians chat with a shop on WhatsApp: short informal Indonesian, lowercase, abbreviations such as 'kak', 'yg', 'brp', 'tf', 'ready'. One short message at a time. Never write in English. End the chat once you know how much to transfer."
+   }
+  },
+  "initial_state": {
+   "initialization_data": {"agent_data": {"chat": {"phone": "6281234500008"}}, "user_data": null},
+   "initialization_actions": null,
+   "message_history": null
+  },
+  "evaluation_criteria": {
+   "actions": [
+    {"action_id": "smoke-01_0", "name": "get_chat_info", "arguments": {}, "info": null},
+    {"action_id": "smoke-01_1", "name": "find_customer_by_phone", "arguments": {"phone": "6281234500008"}, "info": null},
+    {"action_id": "smoke-01_2", "name": "get_product", "arguments": {"product_id": "JK"}, "info": null},
+    {"action_id": "smoke-01_3", "name": "create_order", "arguments": {"customer_id": "C008", "items": [{"item_id": "JK-HTM-L", "qty": 1}], "address_id": "C008-A1", "courier": "JNE", "payment_method": "transfer_bca"}, "info": null}
+   ],
+   "communicate_info": [],
+   "nl_assertions": ["The agent tells the customer that the amount to transfer is Rp198.570 (with the kode unik), not a rounded amount."],
+   "reward_basis": ["DB", "NL_ASSERTION"]
+  }
+ }
+]

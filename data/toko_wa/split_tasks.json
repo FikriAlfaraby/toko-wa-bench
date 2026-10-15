@@ -1,0 +1,4 @@
+{
+ "base": ["smoke-01"],
+ "smoke": ["smoke-01"]
+}

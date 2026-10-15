@@ -1,0 +1,1631 @@
+{
+ "shop": {
+  "name": "Toko Rapi Bandung",
+  "now": "2026-10-15T10:00:00+07:00"
+ },
+ "chat": {
+  "phone": "0"
+ },
+ "customers": {
+  "C001": {
+   "customer_id": "C001",
+   "name": "Rina Wulandari",
+   "phone": "6281234500001",
+   "addresses": [
+    {
+     "address_id": "C001-A1",
+     "label": "Kos",
+     "recipient": "Rina Wulandari",
+     "street": "Jl. Kaliurang Km 5 No. 12",
+     "district": "Depok",
+     "city": "Yogyakarta",
+     "province": "DI Yogyakarta",
+     "postal_code": "55281"
+    }
+   ],
+   "default_address_id": "C001-A1",
+   "is_reseller": false
+  },
+  "C002": {
+   "customer_id": "C002",
+   "name": "Dimas Pratama",
+   "phone": "6281234500002",
+   "addresses": [
+    {
+     "address_id": "C002-A1",
+     "label": "Rumah",
+     "recipient": "Dimas Pratama",
+     "street": "Jl. Cigadung Raya No. 8",
+     "district": "Cibeunying Kaler",
+     "city": "Bandung",
+     "province": "Jawa Barat",
+     "postal_code": "40191"
+    }
+   ],
+   "default_address_id": "C002-A1",
+   "is_reseller": false
+  },
+  "C003": {
+   "customer_id": "C003",
+   "name": "Sari Kusuma",
+   "phone": "6281234500003",
+   "addresses": [
+    {
+     "address_id": "C003-A1",
+     "label": "Rumah",
+     "recipient": "Sari Kusuma",
+     "street": "Jl. Rungkut Asri No. 21",
+     "district": "Rungkut",
+     "city": "Surabaya",
+     "province": "Jawa Timur",
+     "postal_code": "60293"
+    },
+    {
+     "address_id": "C003-A2",
+     "label": "Kantor",
+     "recipient": "Sari Kusuma",
+     "street": "Jl. Basuki Rahmat No. 129, Lt. 7",
+     "district": "Tegalsari",
+     "city": "Surabaya",
+     "province": "Jawa Timur",
+     "postal_code": "60271"
+    }
+   ],
+   "default_address_id": "C003-A1",
+   "is_reseller": false
+  },
+  "C004": {
+   "customer_id": "C004",
+   "name": "Bayu Saputra",
+   "phone": "6281234500004",
+   "addresses": [
+    {
+     "address_id": "C004-A1",
+     "label": "Rumah",
+     "recipient": "Bayu Saputra",
+     "street": "Perum Harapan Indah Blok C2 No. 5",
+     "district": "Medan Satria",
+     "city": "Bekasi",
+     "province": "Jawa Barat",
+     "postal_code": "17132"
+    }
+   ],
+   "default_address_id": "C004-A1",
+   "is_reseller": false
+  },
+  "C005": {
+   "customer_id": "C005",
+   "name": "Maya Anggraini",
+   "phone": "6281234500005",
+   "addresses": [
+    {
+     "address_id": "C005-A1",
+     "label": "Apartemen",
+     "recipient": "Maya Anggraini",
+     "street": "Apartemen Kalibata City Tower B 12F",
+     "district": "Pancoran",
+     "city": "Jakarta Selatan",
+     "province": "DKI Jakarta",
+     "postal_code": "12750"
+    }
+   ],
+   "default_address_id": "C005-A1",
+   "is_reseller": false
+  },
+  "C006": {
+   "customer_id": "C006",
+   "name": "Fajar Nugroho",
+   "phone": "6281234500006",
+   "addresses": [
+    {
+     "address_id": "C006-A1",
+     "label": "Rumah",
+     "recipient": "Fajar Nugroho",
+     "street": "Jl. Setia Budi No. 77",
+     "district": "Medan Selayang",
+     "city": "Medan",
+     "province": "Sumatera Utara",
+     "postal_code": "20132"
+    }
+   ],
+   "default_address_id": "C006-A1",
+   "is_reseller": false
+  },
+  "C007": {
+   "customer_id": "C007",
+   "name": "Lestari Putri",
+   "phone": "6281234500007",
+   "addresses": [
+    {
+     "address_id": "C007-A1",
+     "label": "Rumah",
+     "recipient": "Lestari Putri",
+     "street": "Jl. Hertasning Baru No. 30",
+     "district": "Rappocini",
+     "city": "Makassar",
+     "province": "Sulawesi Selatan",
+     "postal_code": "90222"
+    }
+   ],
+   "default_address_id": "C007-A1",
+   "is_reseller": false
+  },
+  "C008": {
+   "customer_id": "C008",
+   "name": "Agus Setiawan",
+   "phone": "6281234500008",
+   "addresses": [
+    {
+     "address_id": "C008-A1",
+     "label": "Rumah",
+     "recipient": "Agus Setiawan",
+     "street": "Jl. Antapani Lama No. 4",
+     "district": "Antapani",
+     "city": "Bandung",
+     "province": "Jawa Barat",
+     "postal_code": "40291"
+    }
+   ],
+   "default_address_id": "C008-A1",
+   "is_reseller": false
+  },
+  "C009": {
+   "customer_id": "C009",
+   "name": "Nur Hidayah",
+   "phone": "6281234500009",
+   "addresses": [
+    {
+     "address_id": "C009-A1",
+     "label": "Rumah",
+     "recipient": "Nur Hidayah",
+     "street": "Jl. Mitra Batik No. 15",
+     "district": "Tamansari",
+     "city": "Tasikmalaya",
+     "province": "Jawa Barat",
+     "postal_code": "46196"
+    }
+   ],
+   "default_address_id": "C009-A1",
+   "is_reseller": false
+  },
+  "C010": {
+   "customer_id": "C010",
+   "name": "Asep Sunandar",
+   "phone": "6281234500010",
+   "addresses": [
+    {
+     "address_id": "C010-A1",
+     "label": "Imah",
+     "recipient": "Asep Sunandar",
+     "street": "Kp. Cimanuk RT 02/05",
+     "district": "Tarogong Kidul",
+     "city": "Garut",
+     "province": "Jawa Barat",
+     "postal_code": "44151"
+    }
+   ],
+   "default_address_id": "C010-A1",
+   "is_reseller": false
+  },
+  "C011": {
+   "customer_id": "C011",
+   "name": "Dewi Lestari",
+   "phone": "6281234500011",
+   "addresses": [
+    {
+     "address_id": "C011-A1",
+     "label": "Rumah",
+     "recipient": "Dewi Lestari",
+     "street": "Jl. Soekarno Hatta No. 9",
+     "district": "Lowokwaru",
+     "city": "Malang",
+     "province": "Jawa Timur",
+     "postal_code": "65141"
+    }
+   ],
+   "default_address_id": "C011-A1",
+   "is_reseller": false
+  },
+  "C012": {
+   "customer_id": "C012",
+   "name": "Rudi Hartono",
+   "phone": "6281234500012",
+   "addresses": [
+    {
+     "address_id": "C012-A1",
+     "label": "Toko",
+     "recipient": "Rudi Hartono",
+     "street": "Jl. Pandanaran No. 50",
+     "district": "Semarang Tengah",
+     "city": "Semarang",
+     "province": "Jawa Tengah",
+     "postal_code": "50241"
+    }
+   ],
+   "default_address_id": "C012-A1",
+   "is_reseller": false
+  },
+  "C013": {
+   "customer_id": "C013",
+   "name": "Hj. Siti Aminah",
+   "phone": "6281234500013",
+   "addresses": [
+    {
+     "address_id": "C013-A1",
+     "label": "Toko Berkah",
+     "recipient": "Siti Aminah",
+     "street": "Pasar Baru Lt. 2 Blok F No. 8",
+     "district": "Sumur Bandung",
+     "city": "Bandung",
+     "province": "Jawa Barat",
+     "postal_code": "40111"
+    }
+   ],
+   "default_address_id": "C013-A1",
+   "is_reseller": true
+  }
+ },
+ "products": {
+  "KS": {
+   "product_id": "KS",
+   "name": "Kaos Polos Cotton Combed 30s",
+   "category": "kaos",
+   "variants": {
+    "KS-HTM-S": {
+     "item_id": "KS-HTM-S",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "S"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-HTM-M": {
+     "item_id": "KS-HTM-M",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "M"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 10,
+     "weight_grams": 200
+    },
+    "KS-HTM-L": {
+     "item_id": "KS-HTM-L",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "L"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-HTM-XL": {
+     "item_id": "KS-HTM-XL",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "XL"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-PTH-S": {
+     "item_id": "KS-PTH-S",
+     "options": {
+      "warna": "putih",
+      "ukuran": "S"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 2,
+     "weight_grams": 200
+    },
+    "KS-PTH-M": {
+     "item_id": "KS-PTH-M",
+     "options": {
+      "warna": "putih",
+      "ukuran": "M"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-PTH-L": {
+     "item_id": "KS-PTH-L",
+     "options": {
+      "warna": "putih",
+      "ukuran": "L"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 11,
+     "weight_grams": 200
+    },
+    "KS-PTH-XL": {
+     "item_id": "KS-PTH-XL",
+     "options": {
+      "warna": "putih",
+      "ukuran": "XL"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-NVY-S": {
+     "item_id": "KS-NVY-S",
+     "options": {
+      "warna": "navy",
+      "ukuran": "S"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-NVY-M": {
+     "item_id": "KS-NVY-M",
+     "options": {
+      "warna": "navy",
+      "ukuran": "M"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-NVY-L": {
+     "item_id": "KS-NVY-L",
+     "options": {
+      "warna": "navy",
+      "ukuran": "L"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-NVY-XL": {
+     "item_id": "KS-NVY-XL",
+     "options": {
+      "warna": "navy",
+      "ukuran": "XL"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 0,
+     "weight_grams": 200
+    },
+    "KS-ABU-S": {
+     "item_id": "KS-ABU-S",
+     "options": {
+      "warna": "abu",
+      "ukuran": "S"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-ABU-M": {
+     "item_id": "KS-ABU-M",
+     "options": {
+      "warna": "abu",
+      "ukuran": "M"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    },
+    "KS-ABU-L": {
+     "item_id": "KS-ABU-L",
+     "options": {
+      "warna": "abu",
+      "ukuran": "L"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 10,
+     "weight_grams": 200
+    },
+    "KS-ABU-XL": {
+     "item_id": "KS-ABU-XL",
+     "options": {
+      "warna": "abu",
+      "ukuran": "XL"
+     },
+     "price": 59000,
+     "reseller_price": 49000,
+     "stock": 12,
+     "weight_grams": 200
+    }
+   }
+  },
+  "KM": {
+   "product_id": "KM",
+   "name": "Kemeja Flanel Kotak",
+   "category": "kemeja",
+   "variants": {
+    "KM-MRH-M": {
+     "item_id": "KM-MRH-M",
+     "options": {
+      "warna": "merah",
+      "ukuran": "M"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 12,
+     "weight_grams": 300
+    },
+    "KM-MRH-L": {
+     "item_id": "KM-MRH-L",
+     "options": {
+      "warna": "merah",
+      "ukuran": "L"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 12,
+     "weight_grams": 300
+    },
+    "KM-MRH-XL": {
+     "item_id": "KM-MRH-XL",
+     "options": {
+      "warna": "merah",
+      "ukuran": "XL"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 12,
+     "weight_grams": 300
+    },
+    "KM-HJU-M": {
+     "item_id": "KM-HJU-M",
+     "options": {
+      "warna": "hijau",
+      "ukuran": "M"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 12,
+     "weight_grams": 300
+    },
+    "KM-HJU-L": {
+     "item_id": "KM-HJU-L",
+     "options": {
+      "warna": "hijau",
+      "ukuran": "L"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 12,
+     "weight_grams": 300
+    },
+    "KM-HJU-XL": {
+     "item_id": "KM-HJU-XL",
+     "options": {
+      "warna": "hijau",
+      "ukuran": "XL"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 0,
+     "weight_grams": 300
+    },
+    "KM-BRU-M": {
+     "item_id": "KM-BRU-M",
+     "options": {
+      "warna": "biru",
+      "ukuran": "M"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 12,
+     "weight_grams": 300
+    },
+    "KM-BRU-L": {
+     "item_id": "KM-BRU-L",
+     "options": {
+      "warna": "biru",
+      "ukuran": "L"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 11,
+     "weight_grams": 300
+    },
+    "KM-BRU-XL": {
+     "item_id": "KM-BRU-XL",
+     "options": {
+      "warna": "biru",
+      "ukuran": "XL"
+     },
+     "price": 129000,
+     "reseller_price": 109000,
+     "stock": 12,
+     "weight_grams": 300
+    }
+   }
+  },
+  "HJ": {
+   "product_id": "HJ",
+   "name": "Hijab Segi Empat Voal",
+   "category": "hijab",
+   "variants": {
+    "HJ-HTM": {
+     "item_id": "HJ-HTM",
+     "options": {
+      "warna": "hitam"
+     },
+     "price": 45000,
+     "reseller_price": 38000,
+     "stock": 4,
+     "weight_grams": 100
+    },
+    "HJ-CRM": {
+     "item_id": "HJ-CRM",
+     "options": {
+      "warna": "cream"
+     },
+     "price": 45000,
+     "reseller_price": 38000,
+     "stock": 4,
+     "weight_grams": 100
+    },
+    "HJ-MRN": {
+     "item_id": "HJ-MRN",
+     "options": {
+      "warna": "maroon"
+     },
+     "price": 45000,
+     "reseller_price": 38000,
+     "stock": 3,
+     "weight_grams": 100
+    },
+    "HJ-NVY": {
+     "item_id": "HJ-NVY",
+     "options": {
+      "warna": "navy"
+     },
+     "price": 45000,
+     "reseller_price": 38000,
+     "stock": 10,
+     "weight_grams": 100
+    },
+    "HJ-DPK": {
+     "item_id": "HJ-DPK",
+     "options": {
+      "warna": "dusty pink"
+     },
+     "price": 45000,
+     "reseller_price": 38000,
+     "stock": 12,
+     "weight_grams": 100
+    }
+   }
+  },
+  "CL": {
+   "product_id": "CL",
+   "name": "Celana Chino Slim Fit",
+   "category": "celana",
+   "variants": {
+    "CL-CRM-28": {
+     "item_id": "CL-CRM-28",
+     "options": {
+      "warna": "cream",
+      "ukuran": "28"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 0,
+     "weight_grams": 450
+    },
+    "CL-CRM-30": {
+     "item_id": "CL-CRM-30",
+     "options": {
+      "warna": "cream",
+      "ukuran": "30"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-CRM-32": {
+     "item_id": "CL-CRM-32",
+     "options": {
+      "warna": "cream",
+      "ukuran": "32"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-CRM-34": {
+     "item_id": "CL-CRM-34",
+     "options": {
+      "warna": "cream",
+      "ukuran": "34"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-HTM-28": {
+     "item_id": "CL-HTM-28",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "28"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-HTM-30": {
+     "item_id": "CL-HTM-30",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "30"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-HTM-32": {
+     "item_id": "CL-HTM-32",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "32"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-HTM-34": {
+     "item_id": "CL-HTM-34",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "34"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-NVY-28": {
+     "item_id": "CL-NVY-28",
+     "options": {
+      "warna": "navy",
+      "ukuran": "28"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-NVY-30": {
+     "item_id": "CL-NVY-30",
+     "options": {
+      "warna": "navy",
+      "ukuran": "30"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 11,
+     "weight_grams": 450
+    },
+    "CL-NVY-32": {
+     "item_id": "CL-NVY-32",
+     "options": {
+      "warna": "navy",
+      "ukuran": "32"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    },
+    "CL-NVY-34": {
+     "item_id": "CL-NVY-34",
+     "options": {
+      "warna": "navy",
+      "ukuran": "34"
+     },
+     "price": 159000,
+     "reseller_price": 135000,
+     "stock": 12,
+     "weight_grams": 450
+    }
+   }
+  },
+  "JK": {
+   "product_id": "JK",
+   "name": "Jaket Hoodie Fleece",
+   "category": "jaket",
+   "variants": {
+    "JK-HTM-M": {
+     "item_id": "JK-HTM-M",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "M"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 12,
+     "weight_grams": 600
+    },
+    "JK-HTM-L": {
+     "item_id": "JK-HTM-L",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "L"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 11,
+     "weight_grams": 600
+    },
+    "JK-HTM-XL": {
+     "item_id": "JK-HTM-XL",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "XL"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 12,
+     "weight_grams": 600
+    },
+    "JK-ABU-M": {
+     "item_id": "JK-ABU-M",
+     "options": {
+      "warna": "abu",
+      "ukuran": "M"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 12,
+     "weight_grams": 600
+    },
+    "JK-ABU-L": {
+     "item_id": "JK-ABU-L",
+     "options": {
+      "warna": "abu",
+      "ukuran": "L"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 12,
+     "weight_grams": 600
+    },
+    "JK-ABU-XL": {
+     "item_id": "JK-ABU-XL",
+     "options": {
+      "warna": "abu",
+      "ukuran": "XL"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 11,
+     "weight_grams": 600
+    },
+    "JK-MRN-M": {
+     "item_id": "JK-MRN-M",
+     "options": {
+      "warna": "maroon",
+      "ukuran": "M"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 12,
+     "weight_grams": 600
+    },
+    "JK-MRN-L": {
+     "item_id": "JK-MRN-L",
+     "options": {
+      "warna": "maroon",
+      "ukuran": "L"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 12,
+     "weight_grams": 600
+    },
+    "JK-MRN-XL": {
+     "item_id": "JK-MRN-XL",
+     "options": {
+      "warna": "maroon",
+      "ukuran": "XL"
+     },
+     "price": 189000,
+     "reseller_price": 159000,
+     "stock": 1,
+     "weight_grams": 600
+    }
+   }
+  },
+  "TB": {
+   "product_id": "TB",
+   "name": "Totebag Kanvas",
+   "category": "tas",
+   "variants": {
+    "TB-NTR": {
+     "item_id": "TB-NTR",
+     "options": {
+      "warna": "natural"
+     },
+     "price": 35000,
+     "reseller_price": 29000,
+     "stock": 11,
+     "weight_grams": 150
+    },
+    "TB-HTM": {
+     "item_id": "TB-HTM",
+     "options": {
+      "warna": "hitam"
+     },
+     "price": 35000,
+     "reseller_price": 29000,
+     "stock": 11,
+     "weight_grams": 150
+    }
+   }
+  }
+ },
+ "orders": {
+  "ORD-1001": {
+   "order_id": "ORD-1001",
+   "customer_id": "C001",
+   "status": "diterima",
+   "created_at": "2026-10-01T09:00:00+07:00",
+   "items": [
+    {
+     "item_id": "KS-HTM-M",
+     "product_id": "KS",
+     "name": "Kaos Polos Cotton Combed 30s",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "M"
+     },
+     "qty": 2,
+     "unit_price": 59000
+    }
+   ],
+   "shipment": {
+    "courier": "JNE",
+    "address": {
+     "address_id": "C001-A1",
+     "label": "Kos",
+     "recipient": "Rina Wulandari",
+     "street": "Jl. Kaliurang Km 5 No. 12",
+     "district": "Depok",
+     "city": "Yogyakarta",
+     "province": "DI Yogyakarta",
+     "postal_code": "55281"
+    },
+    "shipping_cost": 15000,
+    "tracking_number": "JNE0100000101",
+    "events": [
+     "2026-10-02 15:10 Paket diterima di agen JNE Bandung",
+     "2026-10-04 13:20 Diterima oleh yang bersangkutan"
+    ]
+   },
+   "payment_method": "transfer_bca",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 237,
+   "total": 133237,
+   "paid_transfer_id": "TRF-501",
+   "delivered_at": "2026-10-04T13:20:00+07:00",
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  },
+  "ORD-1002": {
+   "order_id": "ORD-1002",
+   "customer_id": "C001",
+   "status": "dikirim",
+   "created_at": "2026-10-13T20:00:00+07:00",
+   "items": [
+    {
+     "item_id": "HJ-CRM",
+     "product_id": "HJ",
+     "name": "Hijab Segi Empat Voal",
+     "options": {
+      "warna": "cream"
+     },
+     "qty": 2,
+     "unit_price": 45000
+    },
+    {
+     "item_id": "TB-NTR",
+     "product_id": "TB",
+     "name": "Totebag Kanvas",
+     "options": {
+      "warna": "natural"
+     },
+     "qty": 1,
+     "unit_price": 35000
+    }
+   ],
+   "shipment": {
+    "courier": "JNE",
+    "address": {
+     "address_id": "C001-A1",
+     "label": "Kos",
+     "recipient": "Rina Wulandari",
+     "street": "Jl. Kaliurang Km 5 No. 12",
+     "district": "Depok",
+     "city": "Yogyakarta",
+     "province": "DI Yogyakarta",
+     "postal_code": "55281"
+    },
+    "shipping_cost": 15000,
+    "tracking_number": "JNE0100000102",
+    "events": [
+     "2026-10-14 16:02 Paket diterima di agen JNE Bandung",
+     "2026-10-14 22:40 Berangkat dari Bandung menuju Yogyakarta",
+     "2026-10-15 06:15 Tiba di gudang JNE Yogyakarta"
+    ]
+   },
+   "payment_method": "transfer_bca",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 274,
+   "total": 140274,
+   "paid_transfer_id": "TRF-502",
+   "delivered_at": null,
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  },
+  "ORD-1003": {
+   "order_id": "ORD-1003",
+   "customer_id": "C002",
+   "status": "dikirim",
+   "created_at": "2026-10-10T19:00:00+07:00",
+   "items": [
+    {
+     "item_id": "JK-HTM-L",
+     "product_id": "JK",
+     "name": "Jaket Hoodie Fleece",
+     "options": {
+      "warna": "hitam",
+      "ukuran": "L"
+     },
+     "qty": 1,
+     "unit_price": 189000
+    }
+   ],
+   "shipment": {
+    "courier": "J&T",
+    "address": {
+     "address_id": "C002-A1",
+     "label": "Rumah",
+     "recipient": "Dimas Pratama",
+     "street": "Jl. Cigadung Raya No. 8",
+     "district": "Cibeunying Kaler",
+     "city": "Bandung",
+     "province": "Jawa Barat",
+     "postal_code": "40191"
+    },
+    "shipping_cost": 8000,
+    "tracking_number": "JT0200000201",
+    "events": [
+     "2026-10-11 14:30 Paket diterima di drop point J&T Bandung",
+     "2026-10-12 02:10 Transit di gateway Bandung",
+     "2026-10-12 09:45 Paket tertahan di gateway, menunggu jadwal berikutnya"
+    ]
+   },
+   "payment_method": "transfer_bri",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 311,
+   "total": 197311,
+   "paid_transfer_id": "TRF-503",
+   "delivered_at": null,
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  },
+  "ORD-1004": {
+   "order_id": "ORD-1004",
+   "customer_id": "C003",
+   "status": "menunggu_pembayaran",
+   "created_at": "2026-10-14T21:00:00+07:00",
+   "items": [
+    {
+     "item_id": "KM-BRU-L",
+     "product_id": "KM",
+     "name": "Kemeja Flanel Kotak",
+     "options": {
+      "warna": "biru",
+      "ukuran": "L"
+     },
+     "qty": 1,
+     "unit_price": 129000
+    },
+    {
+     "item_id": "KS-PTH-L",
+     "product_id": "KS",
+     "name": "Kaos Polos Cotton Combed 30s",
+     "options": {
+      "warna": "putih",
+      "ukuran": "L"
+     },
+     "qty": 1,
+     "unit_price": 59000
+    }
+   ],
+   "shipment": {
+    "courier": "JNE",
+    "address": {
+     "address_id": "C003-A1",
+     "label": "Rumah",
+     "recipient": "Sari Kusuma",
+     "street": "Jl. Rungkut Asri No. 21",
+     "district": "Rungkut",
+     "city": "Surabaya",
+     "province": "Jawa Timur",
+     "postal_code": "60293"
+    },
+    "shipping_cost": 18000,
+    "tracking_number": null,
+    "events": []
+   },
+   "payment_method": "transfer_bca",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 348,
+   "total": 206348,
+   "paid_transfer_id": null,
+   "delivered_at": null,
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  },
+  "ORD-1005": {
+   "order_id": "ORD-1005",
+   "customer_id": "C004",
+   "status": "diterima",
+   "created_at": "2026-10-10T08:00:00+07:00",
+   "items": [
+    {
+     "item_id": "JK-ABU-XL",
+     "product_id": "JK",
+     "name": "Jaket Hoodie Fleece",
+     "options": {
+      "warna": "abu",
+      "ukuran": "XL"
+     },
+     "qty": 1,
+     "unit_price": 189000
+    }
+   ],
+   "shipment": {
+    "courier": "JNE",
+    "address": {
+     "address_id": "C004-A1",
+     "label": "Rumah",
+     "recipient": "Bayu Saputra",
+     "street": "Perum Harapan Indah Blok C2 No. 5",
+     "district": "Medan Satria",
+     "city": "Bekasi",
+     "province": "Jawa Barat",
+     "postal_code": "17132"
+    },
+    "shipping_cost": 11000,
+    "tracking_number": "JNE0400000401",
+    "events": [
+     "2026-10-11 10:00 Paket diterima di agen JNE Bandung",
+     "2026-10-14 08:30 Diterima oleh yang bersangkutan"
+    ]
+   },
+   "payment_method": "transfer_bri",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 385,
+   "total": 200385,
+   "paid_transfer_id": "TRF-504",
+   "delivered_at": "2026-10-14T08:30:00+07:00",
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  },
+  "ORD-1006": {
+   "order_id": "ORD-1006",
+   "customer_id": "C004",
+   "status": "menunggu_pembayaran",
+   "created_at": "2026-10-15T09:30:00+07:00",
+   "items": [
+    {
+     "item_id": "KS-ABU-L",
+     "product_id": "KS",
+     "name": "Kaos Polos Cotton Combed 30s",
+     "options": {
+      "warna": "abu",
+      "ukuran": "L"
+     },
+     "qty": 2,
+     "unit_price": 59000
+    }
+   ],
+   "shipment": {
+    "courier": "J&T",
+    "address": {
+     "address_id": "C004-A1",
+     "label": "Rumah",
+     "recipient": "Bayu Saputra",
+     "street": "Perum Harapan Indah Blok C2 No. 5",
+     "district": "Medan Satria",
+     "city": "Bekasi",
+     "province": "Jawa Barat",
+     "postal_code": "17132"
+    },
+    "shipping_cost": 10000,
+    "tracking_number": null,
+    "events": []
+   },
+   "payment_method": "transfer_bri",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 422,
+   "total": 128422,
+   "paid_transfer_id": null,
+   "delivered_at": null,
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  },
+  "ORD-1007": {
+   "order_id": "ORD-1007",
+   "customer_id": "C009",
+   "status": "menunggu_pembayaran",
+   "created_at": "2026-10-14T19:00:00+07:00",
+   "items": [
+    {
+     "item_id": "HJ-NVY",
+     "product_id": "HJ",
+     "name": "Hijab Segi Empat Voal",
+     "options": {
+      "warna": "navy"
+     },
+     "qty": 2,
+     "unit_price": 45000
+    },
+    {
+     "item_id": "HJ-HTM",
+     "product_id": "HJ",
+     "name": "Hijab Segi Empat Voal",
+     "options": {
+      "warna": "hitam"
+     },
+     "qty": 2,
+     "unit_price": 45000
+    },
+    {
+     "item_id": "TB-HTM",
+     "product_id": "TB",
+     "name": "Totebag Kanvas",
+     "options": {
+      "warna": "hitam"
+     },
+     "qty": 1,
+     "unit_price": 35000
+    }
+   ],
+   "shipment": {
+    "courier": "JNE",
+    "address": {
+     "address_id": "C009-A1",
+     "label": "Rumah",
+     "recipient": "Nur Hidayah",
+     "street": "Jl. Mitra Batik No. 15",
+     "district": "Tamansari",
+     "city": "Tasikmalaya",
+     "province": "Jawa Barat",
+     "postal_code": "46196"
+    },
+    "shipping_cost": 12000,
+    "tracking_number": null,
+    "events": []
+   },
+   "payment_method": "transfer_bri",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 459,
+   "total": 227459,
+   "paid_transfer_id": null,
+   "delivered_at": null,
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  },
+  "ORD-1008": {
+   "order_id": "ORD-1008",
+   "customer_id": "C011",
+   "status": "diterima",
+   "created_at": "2026-10-05T10:00:00+07:00",
+   "items": [
+    {
+     "item_id": "CL-NVY-30",
+     "product_id": "CL",
+     "name": "Celana Chino Slim Fit",
+     "options": {
+      "warna": "navy",
+      "ukuran": "30"
+     },
+     "qty": 1,
+     "unit_price": 159000
+    }
+   ],
+   "shipment": {
+    "courier": "JNE",
+    "address": {
+     "address_id": "C011-A1",
+     "label": "Rumah",
+     "recipient": "Dewi Lestari",
+     "street": "Jl. Soekarno Hatta No. 9",
+     "district": "Lowokwaru",
+     "city": "Malang",
+     "province": "Jawa Timur",
+     "postal_code": "65141"
+    },
+    "shipping_cost": 19000,
+    "tracking_number": "JNE1100001101",
+    "events": [
+     "2026-10-06 09:00 Paket diterima di agen JNE Bandung",
+     "2026-10-09 11:00 Diterima oleh yang bersangkutan"
+    ]
+   },
+   "payment_method": "transfer_bca",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 496,
+   "total": 178496,
+   "paid_transfer_id": "TRF-505",
+   "delivered_at": "2026-10-09T11:00:00+07:00",
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  },
+  "ORD-1009": {
+   "order_id": "ORD-1009",
+   "customer_id": "C013",
+   "status": "diproses",
+   "created_at": "2026-10-15T08:00:00+07:00",
+   "items": [
+    {
+     "item_id": "HJ-HTM",
+     "product_id": "HJ",
+     "name": "Hijab Segi Empat Voal",
+     "options": {
+      "warna": "hitam"
+     },
+     "qty": 6,
+     "unit_price": 38000
+    },
+    {
+     "item_id": "HJ-CRM",
+     "product_id": "HJ",
+     "name": "Hijab Segi Empat Voal",
+     "options": {
+      "warna": "cream"
+     },
+     "qty": 6,
+     "unit_price": 38000
+    }
+   ],
+   "shipment": {
+    "courier": "JNE",
+    "address": {
+     "address_id": "C013-A1",
+     "label": "Toko Berkah",
+     "recipient": "Siti Aminah",
+     "street": "Pasar Baru Lt. 2 Blok F No. 8",
+     "district": "Sumur Bandung",
+     "city": "Bandung",
+     "province": "Jawa Barat",
+     "postal_code": "40111"
+    },
+    "shipping_cost": 18000,
+    "tracking_number": null,
+    "events": []
+   },
+   "payment_method": "cod",
+   "promo_code": null,
+   "discount": 0,
+   "unique_code": 0,
+   "total": 474000,
+   "paid_transfer_id": null,
+   "delivered_at": null,
+   "cancel_reason": null,
+   "refund_due": 0,
+   "return_request": null
+  }
+ },
+ "transfers": {
+  "TRF-501": {
+   "transfer_id": "TRF-501",
+   "bank": "BCA",
+   "amount": 133237,
+   "sender_name": "RINA WULANDARI",
+   "received_at": "2026-10-01T11:00:00+07:00",
+   "used_for_order": "ORD-1001"
+  },
+  "TRF-502": {
+   "transfer_id": "TRF-502",
+   "bank": "BCA",
+   "amount": 140274,
+   "sender_name": "RINA WULANDARI",
+   "received_at": "2026-10-13T21:05:00+07:00",
+   "used_for_order": "ORD-1002"
+  },
+  "TRF-503": {
+   "transfer_id": "TRF-503",
+   "bank": "BRI",
+   "amount": 197311,
+   "sender_name": "DIMAS PRATAMA",
+   "received_at": "2026-10-10T19:40:00+07:00",
+   "used_for_order": "ORD-1003"
+  },
+  "TRF-504": {
+   "transfer_id": "TRF-504",
+   "bank": "BRI",
+   "amount": 200385,
+   "sender_name": "BAYU SAPUTRA",
+   "received_at": "2026-10-10T09:00:00+07:00",
+   "used_for_order": "ORD-1005"
+  },
+  "TRF-590": {
+   "transfer_id": "TRF-590",
+   "bank": "BRI",
+   "amount": 227000,
+   "sender_name": "NUR HIDAYAH",
+   "received_at": "2026-10-15T08:10:00+07:00",
+   "used_for_order": null
+  },
+  "TRF-505": {
+   "transfer_id": "TRF-505",
+   "bank": "BCA",
+   "amount": 178496,
+   "sender_name": "DEWI LESTARI",
+   "received_at": "2026-10-05T12:00:00+07:00",
+   "used_for_order": "ORD-1008"
+  },
+  "TRF-506": {
+   "transfer_id": "TRF-506",
+   "bank": "BRI",
+   "amount": 178000,
+   "sender_name": "ANDI WIJAYA",
+   "received_at": "2026-10-15T07:02:00+07:00",
+   "used_for_order": null
+  },
+  "TRF-507": {
+   "transfer_id": "TRF-507",
+   "bank": "BRI",
+   "amount": 250000,
+   "sender_name": "BUDI SANTOSO",
+   "received_at": "2026-10-14T22:30:00+07:00",
+   "used_for_order": null
+  }
+ },
+ "shipping_rates": [
+  {
+   "city": "Bandung",
+   "courier": "JNE",
+   "price_per_kg": 9000,
+   "eta_days": "1-2",
+   "cod": true
+  },
+  {
+   "city": "Bandung",
+   "courier": "J&T",
+   "price_per_kg": 8000,
+   "eta_days": "1-2",
+   "cod": true
+  },
+  {
+   "city": "Bandung",
+   "courier": "SiCepat",
+   "price_per_kg": 8000,
+   "eta_days": "1-2",
+   "cod": false
+  },
+  {
+   "city": "Jakarta Selatan",
+   "courier": "JNE",
+   "price_per_kg": 11000,
+   "eta_days": "2-3",
+   "cod": true
+  },
+  {
+   "city": "Jakarta Selatan",
+   "courier": "J&T",
+   "price_per_kg": 10000,
+   "eta_days": "2-3",
+   "cod": true
+  },
+  {
+   "city": "Jakarta Selatan",
+   "courier": "SiCepat",
+   "price_per_kg": 10000,
+   "eta_days": "2-3",
+   "cod": false
+  },
+  {
+   "city": "Bekasi",
+   "courier": "JNE",
+   "price_per_kg": 11000,
+   "eta_days": "2-3",
+   "cod": true
+  },
+  {
+   "city": "Bekasi",
+   "courier": "J&T",
+   "price_per_kg": 10000,
+   "eta_days": "2-3",
+   "cod": true
+  },
+  {
+   "city": "Bekasi",
+   "courier": "SiCepat",
+   "price_per_kg": 10000,
+   "eta_days": "2-3",
+   "cod": false
+  },
+  {
+   "city": "Surabaya",
+   "courier": "JNE",
+   "price_per_kg": 18000,
+   "eta_days": "2-4",
+   "cod": true
+  },
+  {
+   "city": "Surabaya",
+   "courier": "J&T",
+   "price_per_kg": 17000,
+   "eta_days": "2-4",
+   "cod": false
+  },
+  {
+   "city": "Surabaya",
+   "courier": "SiCepat",
+   "price_per_kg": 16000,
+   "eta_days": "3-4",
+   "cod": false
+  },
+  {
+   "city": "Yogyakarta",
+   "courier": "JNE",
+   "price_per_kg": 15000,
+   "eta_days": "2-3",
+   "cod": true
+  },
+  {
+   "city": "Yogyakarta",
+   "courier": "J&T",
+   "price_per_kg": 14000,
+   "eta_days": "2-3",
+   "cod": false
+  },
+  {
+   "city": "Yogyakarta",
+   "courier": "SiCepat",
+   "price_per_kg": 13000,
+   "eta_days": "2-4",
+   "cod": false
+  },
+  {
+   "city": "Garut",
+   "courier": "JNE",
+   "price_per_kg": 12000,
+   "eta_days": "2-3",
+   "cod": false
+  },
+  {
+   "city": "Garut",
+   "courier": "J&T",
+   "price_per_kg": 11000,
+   "eta_days": "2-3",
+   "cod": false
+  },
+  {
+   "city": "Tasikmalaya",
+   "courier": "JNE",
+   "price_per_kg": 12000,
+   "eta_days": "2-3",
+   "cod": true
+  },
+  {
+   "city": "Tasikmalaya",
+   "courier": "J&T",
+   "price_per_kg": 11000,
+   "eta_days": "2-3",
+   "cod": true
+  },
+  {
+   "city": "Malang",
+   "courier": "JNE",
+   "price_per_kg": 19000,
+   "eta_days": "3-4",
+   "cod": true
+  },
+  {
+   "city": "Malang",
+   "courier": "J&T",
+   "price_per_kg": 18000,
+   "eta_days": "3-4",
+   "cod": false
+  },
+  {
+   "city": "Medan",
+   "courier": "JNE",
+   "price_per_kg": 38000,
+   "eta_days": "4-6",
+   "cod": false
+  },
+  {
+   "city": "Medan",
+   "courier": "J&T",
+   "price_per_kg": 36000,
+   "eta_days": "4-6",
+   "cod": false
+  },
+  {
+   "city": "Makassar",
+   "courier": "JNE",
+   "price_per_kg": 45000,
+   "eta_days": "4-7",
+   "cod": false
+  },
+  {
+   "city": "Makassar",
+   "courier": "J&T",
+   "price_per_kg": 43000,
+   "eta_days": "5-7",
+   "cod": false
+  },
+  {
+   "city": "Semarang",
+   "courier": "JNE",
+   "price_per_kg": 14000,
+   "eta_days": "2-3",
+   "cod": true
+  },
+  {
+   "city": "Semarang",
+   "courier": "J&T",
+   "price_per_kg": 13000,
+   "eta_days": "2-3",
+   "cod": false
+  }
+ ],
+ "promos": {
+  "GAJIAN10": {
+   "code": "GAJIAN10",
+   "percent": 10,
+   "min_purchase": 200000,
+   "valid_until": "2026-10-31"
+  },
+  "OKTOBER5": {
+   "code": "OKTOBER5",
+   "percent": 5,
+   "min_purchase": 100000,
+   "valid_until": "2026-10-10"
+  }
+ }
+}
