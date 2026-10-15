@@ -55,9 +55,13 @@ def test_the_failure_count_and_the_agent_calls_per_long_conversation():
     calls = []
     for s in STRATEGIES:
         sims = [x for x in RUNS[("gpt-6-luna", s)] if x["task_id"] in LONG]
-        calls.append(sum(m["role"] == "assistant" for x in sims for m in x["messages"]) / len(sims))
+        # only what the model generated: the earlier session's admin messages carry the same role
+        calls.append(
+            sum(m["role"] == "assistant" and bool(m.get("usage")) for x in sims for m in x["messages"])
+            / len(sims)
+        )
     says(
-        "Luna made {:.1f} agent calls per conversation with the whole chat, {:.1f} with drop, {:.1f} with "
+        "Luna made {:.1f} model calls per conversation with the whole chat, {:.1f} with drop, {:.1f} with "
         "summary, {:.1f} with facts".format(*calls)
     )
 
@@ -68,7 +72,7 @@ def test_what_the_checks_miss():
         for s in STRATEGIES
         for x in RUNS[("gpt-6-luna", s)]
         for m in x["messages"]
-        if m["role"] == "assistant" and m.get("content")
+        if m["role"] == "assistant" and m.get("content") and m.get("usage")
     ]
     wrapped = sum(m["content"].lstrip().startswith('{"message"') or "JSON only" in m["content"] for m in luna)
     says(f"Luna wrapped {wrapped} of its {len(luna):,} replies in JSON")

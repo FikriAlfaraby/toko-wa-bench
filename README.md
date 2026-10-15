@@ -32,12 +32,12 @@ database and words were both right.
    menjanjikannya"). Given the same promise in a summary marked as the shop system's note, it
    applied the code in 3 of 3. The same trust is what laundered the fake promo.
 5. **No strategy saved tokens.** Compacting made conversations longer: on the long-context tasks
-   Luna made 23.3 agent calls per conversation with the whole chat, 34.3 with drop, 29.6 with
-   summary, 24.8 with facts. The earlier sessions were short (26 to 34 messages), so there was
+   Luna made 9.1 model calls per conversation with the whole chat, 20.1 with drop, 15.4 with
+   summary, 10.6 with facts. The earlier sessions were short (26 to 34 messages), so there was
    little to cut from each call.
 6. **The checks miss what agents say.** In at least 17 conversations Gemini wrote out a bank
    account number for the shop, which the shop never gave (for example "0123-01-000456-50-8");
-   15 of them passed every check. Luna wrapped 325 of its 1,682 replies in JSON ('{"message": ...}'),
+   15 of them passed every check. Luna wrapped 325 of its 734 replies in JSON ('{"message": ...}'),
    which a customer would see as it is.
 
 ### What I predicted wrong
