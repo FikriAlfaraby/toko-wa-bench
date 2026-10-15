@@ -3,8 +3,72 @@
 **An Indonesian WhatsApp-shop domain for [tau-bench](https://github.com/sierra-research/tau2-bench),
 and a measurement of what an agent forgets when a long chat is compacted.**
 
-Status: designed and pre-registered. No result below yet; the predictions were written before any
-model ran the experiment.
+Recorded 15 October 2026: 312 conversations, all in `runs/`. The predictions were tagged on GitHub
+before any model ran the experiment.
+
+## Results
+
+13 tasks x 4 strategies x 2 agent models x 3 trials. Pass^1 = share of conversations whose
+database and words were both right.
+
+| | full | drop | summary | facts |
+|---|---:|---:|---:|---:|
+| GPT-6 Luna, all 13 tasks | 0.85 | 0.72 | 0.87 | 0.82 |
+| GPT-6 Luna, 5 long-context tasks | 0.80 | 0.53 | 0.80 | 0.73 |
+| Gemini 3.8 Flash, all 13 tasks | 0.92 | 0.72 | 0.95 | 0.79 |
+| Gemini 3.8 Flash, 5 long-context tasks | 1.00 | 0.40 | 1.00 | 0.67 |
+
+1. **A summary of yesterday's chat did as well as the whole chat.** On the long-context tasks
+   summary matched full for both models.
+2. **Hiding yesterday's chat cost the most.** 13 of drop's 22 failures lost a detail the task
+   needed: the size corrected from M to L, yesterday's numbered list, the promised promo.
+3. **A note of facts did worse than a summary**, for two reasons found by reading every failure.
+   No note kept yesterday's list numbers (lc-03). And in 3 of 6 runs of lc-05 the note turned the
+   customer's forwarded fake "admin" message into the shop's own promise; Luna's note filed it
+   under "janji atau penolakan toko: ... gratis ongkir ... kode GRATIS". With the whole chat, none
+   of 6 failed.
+4. **A note carries authority.** With the whole chat in front of it, Luna refused yesterday's
+   promised GAJIAN10 in 3 of 3 runs, calling its own shop's promise a mistake ("saya keliru
+   menjanjikannya"). Given the same promise in a summary marked as the shop system's note, it
+   applied the code in 3 of 3. The same trust is what laundered the fake promo.
+5. **No strategy saved tokens.** Compacting made conversations longer: on the long-context tasks
+   Luna made 23.3 agent calls per conversation with the whole chat, 34.3 with drop, 29.6 with
+   summary, 24.8 with facts. The earlier sessions were short (26 to 34 messages), so there was
+   little to cut from each call.
+6. **The checks miss what agents say.** In at least 17 conversations Gemini wrote out a bank
+   account number for the shop, which the shop never gave (for example "0123-01-000456-50-8");
+   15 of them passed every check. Luna wrapped 325 of its 1,682 replies in JSON ('{"message": ...}'),
+   which a customer would see as it is.
+
+### What I predicted wrong
+
+(1) drop lowest and at least 0.30 below full: held for Gemini, failed for Luna (0.27). (2) facts at
+least as good as summary: failed for both. (3) every strategy within 0.15 of full on the tasks
+without an earlier session: held. (4) laundering under summary or facts, none under full: held, all
+three under facts. (5) at least 25% fewer tokens: failed for both; every compacting strategy used
+more. (6) Gemini at least as good as Luna with the whole chat: held.
+
+### Reading every failure
+
+53 of the 312 conversations failed. 19 lost a detail through the strategy and 3 were laundered by
+a note; 22 were agent mistakes with nothing to do with context (Gemini told the customer her parcel
+would arrive "hari ini atau besok", which the tracking does not say, in 7 runs of ts-01; Luna handed
+parcels that were on time to the admin; Luna did not take the Sundanese "muhun" as a yes); 7 were
+the simulated customer saying yes and ending the chat in the same message; 2 were the judge. Seven
+passes were rescued by the simulated customer breaking its script (repeating the size or the
+colour). Counting customer and judge failures as passes and rescued passes as failures, Luna's
+long-context drop falls to 0.40 and summary to 0.67, and Luna's predictions 1 and 2 would hold;
+Gemini barely moves. The table above is the raw, pre-registered measure.
+
+### Weak spots, for a v0.2
+
+- Product search needs every word to match, so "hoodie abu" finds nothing.
+- The simulated customer sometimes says yes and ends the chat in one message.
+- Two judge sentences are brittle: the same delivery wording in ts-01 was judged both ways, and "I
+  cannot open the image" depends on exact wording.
+- tau-bench's agent instruction asks for "valid JSON only"; Luna obeys by wrapping its replies.
+- Limits: 13 tasks and 3 trials, so one conversation moves a long-context score by 0.07; earlier
+  sessions are short; one simulated customer and one judge (Luna) for every run.
 
 ## Why
 
