@@ -4,10 +4,12 @@ Pass^1 per model and strategy (overall and per task group), the six predictions 
 numbers, tokens per conversation, and every task's result. Prediction 4 needs reading by hand: the
 lc-05 runs are listed with what the agent said about ongkir.
 
-    uv run python scripts/analyze.py <tau2 simulations dir> [--json results/exp1.json]
+    uv run python scripts/analyze.py runs --json results/exp1-summary.json
+    (or point it at tau2's data/simulations folder)
 """
 
 import argparse
+import gzip
 import json
 import re
 from pathlib import Path
@@ -19,14 +21,23 @@ STRATEGIES = ["full", "drop", "summary", "facts"]
 GROUPS = ["topic_switch", "long_context", "other"]
 
 
+def read_run(sim_dir: Path, name: str) -> dict | None:
+    """A run as tau2 saved it (<name>/results.json) or as kept in this repo (runs/<name>.json.gz)."""
+    for path in (sim_dir / name / "results.json", sim_dir / f"{name}.json.gz"):
+        if path.exists():
+            raw = gzip.decompress(path.read_bytes()) if path.suffix == ".gz" else path.read_bytes()
+            return json.loads(raw.decode("utf-8"))
+    return None
+
+
 def load(sim_dir: Path) -> dict:
     runs = {}
     for model in MODELS:
         for strategy in STRATEGIES:
-            path = sim_dir / f"exp1-{model}-{strategy}" / "results.json"
-            if not path.exists():
+            run = read_run(sim_dir, f"exp1-{model}-{strategy}")
+            if run is None:
                 continue
-            sims = json.loads(path.read_text(encoding="utf-8"))["simulations"]
+            sims = run["simulations"]
             runs[(model, strategy)] = [
                 s for s in sims if s.get("termination_reason") != "infrastructure_error"
             ]
