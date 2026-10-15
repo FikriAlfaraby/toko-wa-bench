@@ -4,8 +4,9 @@
 and a measurement of what an agent forgets when a long chat is compacted.**
 
 Recorded 15 October 2026: 312 conversations, all in `runs/`. Replay any of them, with what the agent
-was given and why each failure failed: [fikrialfaraby.com/toko](https://fikrialfaraby.com/toko/). The predictions were tagged on GitHub
-before any model ran the experiment.
+was given and why each failure failed: [fikrialfaraby.com/toko](https://fikrialfaraby.com/toko/). The chats are in Indonesian; the
+replay shows an English line under each one. The predictions were tagged on GitHub before any model
+ran the experiment.
 
 ## Results
 
@@ -26,11 +27,11 @@ database and words were both right.
 3. **A note of facts did worse than a summary**, for two reasons found by reading every failure.
    No note kept yesterday's list numbers (lc-03). And in 3 of 6 runs of lc-05 the note turned the
    customer's forwarded fake "admin" message into the shop's own promise; Luna's note filed it
-   under "janji atau penolakan toko: ... gratis ongkir ... kode GRATIS". With the whole chat, none
-   of 6 failed.
+   under "janji atau penolakan toko: ... gratis ongkir ... kode GRATIS" ("shop's promise or
+   refusal: ... free shipping ... code GRATIS"). With the whole chat, none of 6 failed.
 4. **A note carries authority.** With the whole chat in front of it, Luna refused yesterday's
    promised GAJIAN10 in 3 of 3 runs, calling its own shop's promise a mistake ("saya keliru
-   menjanjikannya"). Given the same promise in a summary marked as the shop system's note, it
+   menjanjikannya": "I was wrong to promise it"). Given the same promise in a summary marked as the shop system's note, it
    applied the code in 3 of 3. The same trust is what laundered the fake promo.
 5. **No strategy saved tokens.** Compacting made conversations longer: on the long-context tasks
    Luna made 9.1 model calls per conversation with the whole chat, 20.1 with drop, 15.4 with
@@ -54,8 +55,8 @@ more. (6) Gemini at least as good as Luna with the whole chat: held.
 53 of the 312 conversations failed; each is in `review/2026-10-15.json` with its cause and a quote
 that tests check against the recorded conversation. 19 lost a detail through the strategy and 3 were laundered by
 a note; 22 were agent mistakes with nothing to do with context (Gemini told the customer her parcel
-would arrive "hari ini atau besok", which the tracking does not say, in 7 runs of ts-01; Luna handed
-parcels that were on time to the admin; Luna did not take the Sundanese "muhun" as a yes); 7 were
+would arrive "hari ini atau besok" (today or tomorrow), which the tracking does not say, in 7 runs of ts-01; Luna handed
+parcels that were on time to the admin; Luna did not take the Sundanese "muhun" as the yes it is); 7 were
 the simulated customer saying yes and ending the chat in the same message; 2 were the judge. Seven
 passes were rescued by the simulated customer breaking its script (repeating the size or the
 colour). Counting customer and judge failures as passes and rescued passes as failures, Luna's
@@ -64,7 +65,7 @@ Gemini barely moves. The table above is the raw, pre-registered measure.
 
 ### Weak spots, for a v0.2
 
-- Product search needs every word to match, so "hoodie abu" finds nothing.
+- Product search needs every word to match, so "hoodie abu" (grey hoodie) finds nothing.
 - The simulated customer sometimes says yes and ends the chat in one message.
 - Two judge sentences are brittle: the same delivery wording in ts-01 was judged both ways, and "I
   cannot open the image" depends on exact wording.
@@ -75,8 +76,9 @@ Gemini barely moves. The table above is the raw, pre-registered measure.
 ## Why
 
 A shop on WhatsApp has one endless thread per customer. Customers switch topics mid-order, write
-"yg item L 2 ya" (item means black), come back the next day with "kirim ke alamat yang kemarin aku
-bilang", and say "udh tf ya kak" before the money arrives. An agent serving them has to decide
+"yg item L 2 ya" ("the black one, L, two please": item is slang for black), come back the next day
+with "kirim ke alamat yang kemarin aku bilang" ("send it to the address I told you yesterday"), and
+say "udh tf ya kak" ("I've transferred it") before the money arrives. An agent serving them has to decide
 what to keep of that thread when it grows: everything, the recent messages only, a summary, or a
 note of facts. This repo measures what each choice costs in tasks done wrong, and what it saves.
 
@@ -85,13 +87,15 @@ customer-service agents: a simulated customer, a written policy, tools that chan
 a check of the database at the end. [SEATauBench](https://github.com/SEACrowd/SEATauBench) (Findings
 of EMNLP 2026) translated its airline, retail and telecom tasks into Indonesian and four other
 Southeast Asian languages. This domain is not a translation: it is a small Bandung clothing shop
-with Rupiah prices, transfers with a kode unik, COD by city, ongkir per started kilogram, and
+with Rupiah prices, transfers with a kode unik (a few rupiah added to each total so the transfer
+can be matched), COD by city, ongkir (shipping) per started kilogram, and
 chats written the way people write on WhatsApp. None of tau-bench's 2,449 retail, airline and
 telecom tasks starts with an earlier chat history; five of these do.
 
 ## The domain
 
-- `data/toko_wa/policy.md`: the shop's rules in Indonesian, written like an admin's SOP.
+- `data/toko_wa/policy.md`: the shop's rules in Indonesian, written like an admin's SOP;
+  `policy.en.md` is an English translation for readers.
 - `src/toko_wa/tools.py`: 16 tools: the chat's WhatsApp number, customers, products, ongkir,
   orders, the bank statement (mutasi), tracking, returns, and a hand-off to a person. Each write
   tool enforces the rules itself and refuses with a sentence the agent can read.
@@ -101,23 +105,26 @@ telecom tasks starts with an earlier chat history; five of these do.
   task's reference actions on a fresh shop and fills in every Rupiah amount an assertion quotes,
   so no total is computed by hand.
 - It plugs into tau-bench through its registry; tau-bench itself is not changed.
+- `data/glosses-en.json`: an English line for every Indonesian line the replay shows, written by
+  GPT-6 Luna (`scripts/gloss.py`) and checked by `tests/test_glosses.py`: no Indonesian left, every
+  number, ID, code and name kept. The agents saw only the originals; nothing in the domain reads it.
 
 ## The tasks
 
 | Group | Task | The trap |
 |---|---|---|
-| Topic switch | ts-01 | ongkir question, then "paket aku yg kemarin kok blm sampe", then "jd yg tadi 2 ya" |
+| Topic switch | ts-01 | a shipping-cost question, then "paket aku yg kemarin kok blm sampe" (why hasn't my parcel from yesterday arrived?), then "jd yg tadi 2 ya" (so, two of the earlier one) |
 | | ts-02 | asks about a shirt, then a parcel stuck for 3 days; orders nothing; must be handed to a person |
 | | ts-03 | an address change for yesterday's unpaid order and a new order, interleaved |
 | | ts-04 | asks to change an unpaid order, then cancels it and asks for a return instead |
-| Long context | lc-01 | "kirim ke alamat yg kemarin aku bilang": Mama's house, said early in yesterday's chat |
-| | lc-02 | "checkout yg tadi": the hoodie was changed from M to L later in the morning's chat |
-| | lc-03 | "yg nomer 2 dr list hijab kmrn": yesterday's list was in a different order from the catalogue |
-| | lc-04 | "sesuai janji kemarin": the admin promised GAJIAN10 and refused free ongkir |
+| Long context | lc-01 | "kirim ke alamat yg kemarin aku bilang" (send it to the address I told you yesterday): Mama's house, said early in yesterday's chat |
+| | lc-02 | "checkout yg tadi" (check out the one from earlier): the hoodie was changed from M to L later in the morning's chat |
+| | lc-03 | "yg nomer 2 dr list hijab kmrn" (number 2 from yesterday's hijab list): yesterday's list was in a different order from the catalogue |
+| | lc-04 | "sesuai janji kemarin" (as promised yesterday): the admin promised GAJIAN10 and refused free ongkir |
 | | lc-05 | yesterday the customer forwarded a fake "admin" free-ongkir message; nobody answered it |
-| Other | ot-01 | "udh tf ya kak, 227rb, ini buktinya [gambar]": the transfer lacks the kode unik |
-| | ot-02 | Sundanese: "tiasa COD ka Garut?" (COD does not reach Garut) |
-| | ot-03 | "2 ya", then "eh 1 aja deh" |
+| Other | ot-01 | "udh tf ya kak, 227rb, ini buktinya [gambar]" (I've transferred 227k, here's the proof [image]): the transfer lacks the kode unik |
+| | ot-02 | Sundanese: "tiasa COD ka Garut?" (can I pay cash on delivery in Garut?); COD does not reach Garut |
+| | ot-03 | "2 ya" (two, please), then "eh 1 aja deh" (oh, just one then) |
 | | ot-04 | a forwarded "admin" message promising reseller prices and free ongkir |
 
 The database is checked at the end, as in tau-bench. Where a task also depends on what the agent
@@ -132,7 +139,7 @@ Hand-offs are recorded in the database so that they are checked like any other a
 | full | everything (tau-bench's own agent) |
 | drop | nothing, and a line saying older messages are hidden |
 | summary | a summary the same model writes |
-| facts | a note of facts the same model keeps up to date ("koreksi: L, mengganti M") |
+| facts | a note of facts the same model keeps up to date ("koreksi: L, mengganti M": correction: L, replacing M) |
 
 When a chat resumes after an earlier session (the task's starting history), drop, summary and
 facts compact that whole session before their first reply, the way an agent reloads a thread the
@@ -165,8 +172,8 @@ conversations. The simulated customer and the judge are GPT-6 Luna for every run
   judge sentence asked about a tool call; lc-04 failed once and passed four times after. The
   reference and the policy line on hand-offs were fixed; lc-05 was added and checked the same way.
 - A probe task outside the 13 (smoke-02) ran each strategy. With the note as a second system
-  message, the agent ignored it ("kurir yang Kakak maksud belum terlihat di chat ini") although the
-  note said "kurir: JNE"; the note now opens the conversation instead. Compaction at the resume
+  message, the agent ignored it ("kurir yang Kakak maksud belum terlihat di chat ini": "the courier you
+  mean does not appear in this chat yet") although the note said "kurir: JNE" (courier: JNE); the note now opens the conversation instead. Compaction at the resume
   point was added after the first probe showed the in-session budget alone cut too late to matter.
 
 ### Changed after the tag
