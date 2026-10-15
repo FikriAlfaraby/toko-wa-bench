@@ -80,7 +80,7 @@ def test_a_line_has_a_gloss_exactly_when_it_has_indonesian_in_it():
         (
             "Apakah mau saya teruskan ke admin toko, Kak?",
             "Would you like me to pass this on to the shop's admin,",
-            "the line asks a question",
+            "stops before the end",
         ),
         ("Selamat pagi Kak, ada yang bisa dibantu?", "Good evening, how can I help?", "another time of day"),
         ("Dikirim jam 7 malam ya kak", "It ships at 7 am.", "wrong half of the day"),

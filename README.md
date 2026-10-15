@@ -110,18 +110,23 @@ telecom tasks starts with an earlier chat history; five of these do.
   wrote the English (`scripts/gloss.py`), and `tests/test_glosses.py` checks it. The check finds
   Indonesian left in the English. It also finds a number that changed with its unit, and a changed
   order, item or promo code. A name in the shop's data that went missing is caught too. So is a
-  change of meaning that keeps every number: a "not" lost or added (Sundanese and Javanese ones
-  too, and the ones English says with other words, like "jangan ragu", feel free), a statement
-  turned into a question or the reverse, a day of the week, tomorrow or yesterday, a time of day
-  or an hour, two of them swapped, a span of days or weeks, and English that stops before the end
-  of its line. Tool arguments and results in JSON are checked string by string. An independent
-  review then wrote wrong English meant to slip past these checks; its cases are tests now. Known
-  gaps: two nots in one sentence count as one; "kurang" (not enough) and a few other opposites are
-  not checked; and a short customer line such as "hoodie nya ready kak" (the hoodie's in stock?)
-  may be a question or a statement. It cannot tell which item a number belongs to, or whether a
-  place outside the shop's data was changed. The lines a finding rests on were therefore read and
-  pinned by hand. Six translations were corrected by hand, and the file says why for each. The
-  agents saw only the originals, and nothing in the domain reads this file.
+  change of meaning that keeps every number (`src/toko_wa/meaning/`): a "not" lost or added,
+  including slang, Sundanese and Javanese ones and the ones English says with other words ("jangan
+  ragu", feel free); an opposite (included or not, more or less, before or after, until or since,
+  up or down, free or charged, from a place or to it, "L, bukan M"); a statement turned into a
+  question or the reverse; a day, a month, next or last, tomorrow or yesterday and their order; a
+  time of day or an hour; a span of days, weeks or hours; and English that stops before the end of
+  its line. A message is compared sentence by sentence. Two independent reviews wrote wrong English
+  meant to slip past the checks; their cases are tests now. Measured on the real lines, changed one
+  way at a time, the checks catch at least 80% of nots taken out, 95% of nots put into a line
+  without one, and 93% of questions made statements and statements made questions
+  (`tests/test_meaning_recall.py`); a not put into a line that already has one is caught about
+  four times in five. Known gaps: "kurang" (not quite) outside a few phrases; "and" turned into
+  "or"; a short customer line such as "hoodie nya ready kak" (the hoodie's in stock?) may be a
+  question or a statement. It cannot tell which item a number belongs to, or whether a place
+  outside the shop's data was changed. The lines a finding rests on were therefore read and pinned
+  by hand. Six translations were corrected by hand, and the file says why for each. The agents saw
+  only the originals, and nothing in the domain reads this file.
 
 ## The tasks
 
