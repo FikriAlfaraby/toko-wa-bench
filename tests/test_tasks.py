@@ -81,3 +81,14 @@ def test_tasks_file_is_valid_json_with_indonesian_style_instructions():
     raw = json.loads(TASKS_PATH.read_text(encoding="utf-8"))
     for task in raw:
         assert "WhatsApp" in task["user_scenario"]["instructions"]["task_instructions"], task["id"]
+
+
+def test_loading_the_tasks_twice_gives_the_same_tasks():
+    """tau2 resumes a run only if every task hashes the same as when the run started."""
+    import time
+
+    from tau2.utils import get_pydantic_hash
+
+    first = {t.id: get_pydantic_hash(t) for t in get_tasks(None)}
+    time.sleep(1.1)
+    assert {t.id: get_pydantic_hash(t) for t in get_tasks(None)} == first

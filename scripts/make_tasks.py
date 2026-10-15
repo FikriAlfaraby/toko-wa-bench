@@ -8,6 +8,7 @@ so no total in a task is computed by hand.
 """
 
 import json
+from datetime import datetime, timedelta
 
 import yaml
 
@@ -56,14 +57,24 @@ def fill(text: str, writes: list, shop: TokoTools) -> str:
     return text
 
 
-def to_task(spec: dict, style: str, histories: dict) -> dict:
+def timed(lines: list[dict], start: str) -> list[dict]:
+    """Each message gets a fixed time, two minutes apart. Without one, tau2 stamps history messages
+    with the time they are loaded, the task's hash changes on every load, and --auto-resume refuses
+    the run ("Tasks were modified"). The model never sees these times."""
+    t0 = datetime.fromisoformat(start)
+    return [
+        {
+            "role": "user" if line["who"] == "customer" else "assistant",
+            "content": line["text"],
+            "timestamp": (t0 + timedelta(minutes=2 * i)).isoformat(),
+        }
+        for i, line in enumerate(lines)
+    ]
+
+
+def to_task(spec: dict, style: str, histories: dict, starts: dict) -> dict:
     writes, shop = replay(spec)
-    history = None
-    if spec.get("history"):
-        history = [
-            {"role": "user" if line["who"] == "customer" else "assistant", "content": line["text"]}
-            for line in histories[spec["history"]]
-        ]
+    history = timed(histories[spec["history"]], starts[spec["history"]]) if spec.get("history") else None
     return {
         "id": spec["id"],
         "description": {"purpose": spec["purpose"], "relevant_policies": None, "notes": spec["group"]},
@@ -103,7 +114,9 @@ def main() -> None:
     specs = yaml.safe_load(SPECS_PATH.read_text(encoding="utf-8"))
     existing = json.loads(TASKS_PATH.read_text(encoding="utf-8"))
     smoke = [t for t in existing if t["id"].startswith("smoke")]
-    tasks = [to_task(spec, specs["style"], specs["histories"]) for spec in specs["tasks"]]
+    tasks = [
+        to_task(spec, specs["style"], specs["histories"], specs["history_start"]) for spec in specs["tasks"]
+    ]
     TASKS_PATH.write_text(json.dumps(smoke + tasks, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     groups: dict[str, list[str]] = {}
     for spec in specs["tasks"]:

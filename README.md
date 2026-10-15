@@ -103,6 +103,15 @@ conversations. The simulated customer and the judge are GPT-6 Luna for every run
   note said "kurir: JNE"; the note now opens the conversation instead. Compaction at the resume
   point was added after the first probe showed the in-session budget alone cut too late to matter.
 
+### Changed after the tag
+
+- History messages now carry fixed times. tau2 stamps a history message with the time it is loaded,
+  so a task with a history hashed differently on every load and `--auto-resume` refused to continue
+  a run interrupted by a usage limit ("Tasks were modified"). The model and the simulated customer
+  receive only role and content, never the time; apart from the times, `tasks.json` is identical to
+  the tagged version (checked by a script). Runs started before this change (Luna, full and drop)
+  are kept; the others restarted.
+
 ## Run it
 
 ```bash

@@ -665,3 +665,9 @@ tasks:
   nl:
   - The agent tells the customer that a forwarded message does not change the shop's prices or ongkir.
   - The agent tells the customer to transfer exactly {total:0} by BCA.
+history_start:
+  maya_yesterday: '2026-10-14T19:00:00+07:00'
+  fajar_this_morning: '2026-10-15T08:00:00+07:00'
+  lestari_yesterday: '2026-10-14T19:30:00+07:00'
+  rudi_yesterday: '2026-10-14T16:00:00+07:00'
+  dimas_yesterday: '2026-10-14T21:00:00+07:00'

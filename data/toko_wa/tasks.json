@@ -110,139 +110,173 @@
    "message_history": [
     {
      "role": "user",
-     "content": "kak mau nanya2 dulu ya"
+     "content": "kak mau nanya2 dulu ya",
+     "timestamp": "2026-10-15T07:00:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Silakan Kak, mau cari apa?"
+     "content": "Silakan Kak, mau cari apa?",
+     "timestamp": "2026-10-15T07:02:00+07:00"
     },
     {
      "role": "user",
-     "content": "aku maunya pake jne ya kak kalo kirim, jangan jnt, kemarin paket jnt aku nyasar"
+     "content": "aku maunya pake jne ya kak kalo kirim, jangan jnt, kemarin paket jnt aku nyasar",
+     "timestamp": "2026-10-15T07:04:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, nanti kami kirim pakai JNE."
+     "content": "Siap Kak, nanti kami kirim pakai JNE.",
+     "timestamp": "2026-10-15T07:06:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna abu bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna abu bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:08:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:10:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna navy bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna navy bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:12:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:14:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna putih bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna putih bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:16:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:18:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna hitam bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna hitam bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:20:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:22:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna abu bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna abu bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:24:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:26:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna navy bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna navy bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:28:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:30:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna putih bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna putih bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:32:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:34:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna hitam bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna hitam bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:36:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:38:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna abu bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna abu bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:40:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:42:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna navy bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna navy bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:44:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:46:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna putih bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna putih bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:48:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:50:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna hitam bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna hitam bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:52:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:54:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna abu bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna abu bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T07:56:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T07:58:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kaos polos warna navy bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini"
+     "content": "kak kalo kaos polos warna navy bahannya adem ga, aku sering keringetan pas naik motor ke kantor, cuaca bandung lagi panas banget akhir2 ini",
+     "timestamp": "2026-10-15T08:00:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor."
+     "content": "Bahannya cotton combed 30s Kak, adem dan menyerap keringat, cocok untuk dipakai harian dan naik motor.",
+     "timestamp": "2026-10-15T08:02:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke kak nanti aku kabarin lagi ya"
+     "content": "oke kak nanti aku kabarin lagi ya",
+     "timestamp": "2026-10-15T08:04:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, ditunggu."
+     "content": "Siap Kak, ditunggu.",
+     "timestamp": "2026-10-15T08:06:00+07:00"
     }
    ]
   },
@@ -601,139 +635,173 @@
    "message_history": [
     {
      "role": "user",
-     "content": "kak mau tanya2 dulu ya, buat kado ultah mama"
+     "content": "kak mau tanya2 dulu ya, buat kado ultah mama",
+     "timestamp": "2026-10-14T19:00:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Boleh banget Kak, mau cari apa? Kami ada kaos, kemeja flanel, hijab voal, celana chino, hoodie, totebag."
+     "content": "Boleh banget Kak, mau cari apa? Kami ada kaos, kemeja flanel, hijab voal, celana chino, hoodie, totebag.",
+     "timestamp": "2026-10-14T19:02:00+07:00"
     },
     {
      "role": "user",
-     "content": "mama suka hijab sih kak. hijab voal warnanya apa aja?"
+     "content": "mama suka hijab sih kak. hijab voal warnanya apa aja?",
+     "timestamp": "2026-10-14T19:04:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Hijab voal segi empat ada hitam, cream, maroon, navy, dan dusty pink. Harganya Rp45.000."
+     "content": "Hijab voal segi empat ada hitam, cream, maroon, navy, dan dusty pink. Harganya Rp45.000.",
+     "timestamp": "2026-10-14T19:06:00+07:00"
     },
     {
      "role": "user",
-     "content": "dusty pink cantik ga kak? mama kulitnya sawo matang"
+     "content": "dusty pink cantik ga kak? mama kulitnya sawo matang",
+     "timestamp": "2026-10-14T19:08:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Dusty pink banyak yang suka Kak, lembut warnanya. Cream juga aman untuk kulit sawo matang."
+     "content": "Dusty pink banyak yang suka Kak, lembut warnanya. Cream juga aman untuk kulit sawo matang.",
+     "timestamp": "2026-10-14T19:10:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke kak, nanti kirimnya ke rumah mama yg di bekasi ya kak, jgn ke apartemen aku. biar surprise"
+     "content": "oke kak, nanti kirimnya ke rumah mama yg di bekasi ya kak, jgn ke apartemen aku. biar surprise",
+     "timestamp": "2026-10-14T19:12:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, nanti dikirim ke alamat Rumah Mama di Bekasi ya. Mau sekalian dibuatkan pesanannya sekarang?"
+     "content": "Siap Kak, nanti dikirim ke alamat Rumah Mama di Bekasi ya. Mau sekalian dibuatkan pesanannya sekarang?",
+     "timestamp": "2026-10-14T19:14:00+07:00"
     },
     {
      "role": "user",
-     "content": "bentar kak aku liat2 dulu"
+     "content": "bentar kak aku liat2 dulu",
+     "timestamp": "2026-10-14T19:16:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, santai saja."
+     "content": "Siap Kak, santai saja.",
+     "timestamp": "2026-10-14T19:18:00+07:00"
     },
     {
      "role": "user",
-     "content": "totebag kanvas itu ukurannya brp kak"
+     "content": "totebag kanvas itu ukurannya brp kak",
+     "timestamp": "2026-10-14T19:20:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Totebag kanvas kami muat laptop 14 inci Kak, warnanya natural dan hitam, Rp35.000."
+     "content": "Totebag kanvas kami muat laptop 14 inci Kak, warnanya natural dan hitam, Rp35.000.",
+     "timestamp": "2026-10-14T19:22:00+07:00"
     },
     {
      "role": "user",
-     "content": "kalo yg natural gampang kotor ga sih"
+     "content": "kalo yg natural gampang kotor ga sih",
+     "timestamp": "2026-10-14T19:24:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Natural memang lebih cepat terlihat kotor Kak, tapi bisa dicuci. Hitam lebih aman untuk dipakai harian."
+     "content": "Natural memang lebih cepat terlihat kotor Kak, tapi bisa dicuci. Hitam lebih aman untuk dipakai harian.",
+     "timestamp": "2026-10-14T19:26:00+07:00"
     },
     {
      "role": "user",
-     "content": "mama sering ke pasar sih, hitam aja kali ya"
+     "content": "mama sering ke pasar sih, hitam aja kali ya",
+     "timestamp": "2026-10-14T19:28:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Hitam cocok untuk ke pasar Kak."
+     "content": "Hitam cocok untuk ke pasar Kak.",
+     "timestamp": "2026-10-14T19:30:00+07:00"
     },
     {
      "role": "user",
-     "content": "kemeja flanel ada ukuran perempuan ga kak"
+     "content": "kemeja flanel ada ukuran perempuan ga kak",
+     "timestamp": "2026-10-14T19:32:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Kemeja flanel kami unisex Kak, ukuran M, L, XL. Untuk perempuan biasanya M."
+     "content": "Kemeja flanel kami unisex Kak, ukuran M, L, XL. Untuk perempuan biasanya M.",
+     "timestamp": "2026-10-14T19:34:00+07:00"
     },
     {
      "role": "user",
-     "content": "warnanya?"
+     "content": "warnanya?",
+     "timestamp": "2026-10-14T19:36:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Merah, hijau, dan biru Kak, Rp129.000."
+     "content": "Merah, hijau, dan biru Kak, Rp129.000.",
+     "timestamp": "2026-10-14T19:38:00+07:00"
     },
     {
      "role": "user",
-     "content": "hmm mama ga terlalu suka kotak2 sih. skip deh"
+     "content": "hmm mama ga terlalu suka kotak2 sih. skip deh",
+     "timestamp": "2026-10-14T19:40:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Baik Kak."
+     "content": "Baik Kak.",
+     "timestamp": "2026-10-14T19:42:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kirim ke bekasi brp hari"
+     "content": "kak kalo kirim ke bekasi brp hari",
+     "timestamp": "2026-10-14T19:44:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Ke Bekasi dengan JNE perkiraan 2-3 hari Kak, J&T juga 2-3 hari."
+     "content": "Ke Bekasi dengan JNE perkiraan 2-3 hari Kak, J&T juga 2-3 hari.",
+     "timestamp": "2026-10-14T19:46:00+07:00"
     },
     {
      "role": "user",
-     "content": "ultahnya sabtu depan sih, aman ya"
+     "content": "ultahnya sabtu depan sih, aman ya",
+     "timestamp": "2026-10-14T19:48:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Kalau dikirim besok, insyaallah sampai sebelum Sabtu depan Kak, sesuai perkiraan kurir."
+     "content": "Kalau dikirim besok, insyaallah sampai sebelum Sabtu depan Kak, sesuai perkiraan kurir.",
+     "timestamp": "2026-10-14T19:50:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke. kak hijabnya bahannya panas ga"
+     "content": "oke. kak hijabnya bahannya panas ga",
+     "timestamp": "2026-10-14T19:52:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Voal tipis dan adem Kak, tidak menerawang."
+     "content": "Voal tipis dan adem Kak, tidak menerawang.",
+     "timestamp": "2026-10-14T19:54:00+07:00"
     },
     {
      "role": "user",
-     "content": "sip. ada promo ga kak skrg"
+     "content": "sip. ada promo ga kak skrg",
+     "timestamp": "2026-10-14T19:56:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Ada kode GAJIAN10 Kak, potongan 10% untuk belanja minimal Rp200.000 sampai 31 Oktober."
+     "content": "Ada kode GAJIAN10 Kak, potongan 10% untuk belanja minimal Rp200.000 sampai 31 Oktober.",
+     "timestamp": "2026-10-14T19:58:00+07:00"
     },
     {
      "role": "user",
-     "content": "wah blm nyampe 200rb kayanya hehe"
+     "content": "wah blm nyampe 200rb kayanya hehe",
+     "timestamp": "2026-10-14T20:00:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Tidak apa-apa Kak."
+     "content": "Tidak apa-apa Kak.",
+     "timestamp": "2026-10-14T20:02:00+07:00"
     },
     {
      "role": "user",
-     "content": "yaudah kak aku pikir2 dulu ya, besok aku kabarin. ngantuk wkwk"
+     "content": "yaudah kak aku pikir2 dulu ya, besok aku kabarin. ngantuk wkwk",
+     "timestamp": "2026-10-14T20:04:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, ditunggu kabarnya. Selamat istirahat."
+     "content": "Siap Kak, ditunggu kabarnya. Selamat istirahat.",
+     "timestamp": "2026-10-14T20:06:00+07:00"
     }
    ]
   },
@@ -801,119 +869,148 @@
    "message_history": [
     {
      "role": "user",
-     "content": "pagi kak, hoodie fleece ready?"
+     "content": "pagi kak, hoodie fleece ready?",
+     "timestamp": "2026-10-15T08:00:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Pagi Kak, ready. Warna hitam, abu, dan maroon, ukuran M, L, XL. Harganya Rp189.000."
+     "content": "Pagi Kak, ready. Warna hitam, abu, dan maroon, ukuran M, L, XL. Harganya Rp189.000.",
+     "timestamp": "2026-10-15T08:02:00+07:00"
     },
     {
      "role": "user",
-     "content": "maroon M 1 ya kak"
+     "content": "maroon M 1 ya kak",
+     "timestamp": "2026-10-15T08:04:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, hoodie maroon M 1. Mau dikirim pakai kurir apa dan bayar dengan apa?"
+     "content": "Siap Kak, hoodie maroon M 1. Mau dikirim pakai kurir apa dan bayar dengan apa?",
+     "timestamp": "2026-10-15T08:06:00+07:00"
     },
     {
      "role": "user",
-     "content": "bentar kak, ongkir ke medan brp"
+     "content": "bentar kak, ongkir ke medan brp",
+     "timestamp": "2026-10-15T08:08:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Ke Medan untuk 1 hoodie (1 kg): JNE Rp38.000 (4-6 hari), J&T Rp36.000 (4-6 hari)."
+     "content": "Ke Medan untuk 1 hoodie (1 kg): JNE Rp38.000 (4-6 hari), J&T Rp36.000 (4-6 hari).",
+     "timestamp": "2026-10-15T08:10:00+07:00"
     },
     {
      "role": "user",
-     "content": "mahal jg ya ongkirnya wkwk"
+     "content": "mahal jg ya ongkirnya wkwk",
+     "timestamp": "2026-10-15T08:12:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Iya Kak, karena dari Bandung ke Medan."
+     "content": "Iya Kak, karena dari Bandung ke Medan.",
+     "timestamp": "2026-10-15T08:14:00+07:00"
     },
     {
      "role": "user",
-     "content": "bisa cod ga kak"
+     "content": "bisa cod ga kak",
+     "timestamp": "2026-10-15T08:16:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Maaf Kak, COD belum tersedia untuk Medan. Pembayarannya transfer BCA atau BRI."
+     "content": "Maaf Kak, COD belum tersedia untuk Medan. Pembayarannya transfer BCA atau BRI.",
+     "timestamp": "2026-10-15T08:18:00+07:00"
     },
     {
      "role": "user",
-     "content": "oh oke"
+     "content": "oh oke",
+     "timestamp": "2026-10-15T08:20:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kemeja flanel yg ijo ada XL?"
+     "content": "kak kemeja flanel yg ijo ada XL?",
+     "timestamp": "2026-10-15T08:22:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Kemeja flanel hijau XL sedang kosong Kak. Yang ada hijau M dan L, atau merah dan biru XL."
+     "content": "Kemeja flanel hijau XL sedang kosong Kak. Yang ada hijau M dan L, atau merah dan biru XL.",
+     "timestamp": "2026-10-15T08:24:00+07:00"
     },
     {
      "role": "user",
-     "content": "yah. yg biru XL aja deh tp nanti dulu"
+     "content": "yah. yg biru XL aja deh tp nanti dulu",
+     "timestamp": "2026-10-15T08:26:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Baik Kak, kalau jadi kabari saja."
+     "content": "Baik Kak, kalau jadi kabari saja.",
+     "timestamp": "2026-10-15T08:28:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak bahan hoodie nya tebel ga"
+     "content": "kak bahan hoodie nya tebel ga",
+     "timestamp": "2026-10-15T08:30:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Fleece-nya tebal dan lembut di dalam Kak, cocok untuk dipakai malam."
+     "content": "Fleece-nya tebal dan lembut di dalam Kak, cocok untuk dipakai malam.",
+     "timestamp": "2026-10-15T08:32:00+07:00"
     },
     {
      "role": "user",
-     "content": "medan panas sih kak hahaha, buat naik motor malam aja"
+     "content": "medan panas sih kak hahaha, buat naik motor malam aja",
+     "timestamp": "2026-10-15T08:34:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Cocok untuk naik motor malam Kak."
+     "content": "Cocok untuk naik motor malam Kak.",
+     "timestamp": "2026-10-15T08:36:00+07:00"
     },
     {
      "role": "user",
-     "content": "eh hoodie nya ganti L aja kak, M kekecilan kayanya, aku kemarin beli M di toko lain sempit"
+     "content": "eh hoodie nya ganti L aja kak, M kekecilan kayanya, aku kemarin beli M di toko lain sempit",
+     "timestamp": "2026-10-15T08:38:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, hoodie maroon jadi ukuran L ya."
+     "content": "Siap Kak, hoodie maroon jadi ukuran L ya.",
+     "timestamp": "2026-10-15T08:40:00+07:00"
     },
     {
      "role": "user",
-     "content": "ada promo ga kak"
+     "content": "ada promo ga kak",
+     "timestamp": "2026-10-15T08:42:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Ada GAJIAN10 Kak, potongan 10% untuk belanja minimal Rp200.000."
+     "content": "Ada GAJIAN10 Kak, potongan 10% untuk belanja minimal Rp200.000.",
+     "timestamp": "2026-10-15T08:44:00+07:00"
     },
     {
      "role": "user",
-     "content": "hoodie doang 189 ya, ga nyampe"
+     "content": "hoodie doang 189 ya, ga nyampe",
+     "timestamp": "2026-10-15T08:46:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Betul Kak, untuk 1 hoodie belum mencapai minimal Rp200.000."
+     "content": "Betul Kak, untuk 1 hoodie belum mencapai minimal Rp200.000.",
+     "timestamp": "2026-10-15T08:48:00+07:00"
     },
     {
      "role": "user",
-     "content": "yaudah gpp. kak warna maroonnya gelap kan"
+     "content": "yaudah gpp. kak warna maroonnya gelap kan",
+     "timestamp": "2026-10-15T08:50:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Maroon-nya merah tua gelap Kak."
+     "content": "Maroon-nya merah tua gelap Kak.",
+     "timestamp": "2026-10-15T08:52:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke sip. nanti siang aku checkout ya kak, mau ke kantor dulu"
+     "content": "oke sip. nanti siang aku checkout ya kak, mau ke kantor dulu",
+     "timestamp": "2026-10-15T08:54:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, ditunggu."
+     "content": "Siap Kak, ditunggu.",
+     "timestamp": "2026-10-15T08:56:00+07:00"
     }
    ]
   },
@@ -977,123 +1074,153 @@
    "message_history": [
     {
      "role": "user",
-     "content": "kak mau liat2 dulu ya"
+     "content": "kak mau liat2 dulu ya",
+     "timestamp": "2026-10-14T19:30:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Silakan Kak. Mau lihat yang mana?"
+     "content": "Silakan Kak. Mau lihat yang mana?",
+     "timestamp": "2026-10-14T19:32:00+07:00"
     },
     {
      "role": "user",
-     "content": "kaos polos warnanya apa aja"
+     "content": "kaos polos warnanya apa aja",
+     "timestamp": "2026-10-14T19:34:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Kaos polos cotton combed 30s:\n1. hitam\n2. putih\n3. navy\n4. abu\nHarganya Rp59.000."
+     "content": "Kaos polos cotton combed 30s:\n1. hitam\n2. putih\n3. navy\n4. abu\nHarganya Rp59.000.",
+     "timestamp": "2026-10-14T19:36:00+07:00"
     },
     {
      "role": "user",
-     "content": "navy XL ada?"
+     "content": "navy XL ada?",
+     "timestamp": "2026-10-14T19:38:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Navy XL sedang kosong Kak. Navy S, M, L ada."
+     "content": "Navy XL sedang kosong Kak. Navy S, M, L ada.",
+     "timestamp": "2026-10-14T19:40:00+07:00"
     },
     {
      "role": "user",
-     "content": "yah aku XL"
+     "content": "yah aku XL",
+     "timestamp": "2026-10-14T19:42:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Untuk XL yang ada hitam, putih, dan abu Kak."
+     "content": "Untuk XL yang ada hitam, putih, dan abu Kak.",
+     "timestamp": "2026-10-14T19:44:00+07:00"
     },
     {
      "role": "user",
-     "content": "nanti deh. kalo hijab voal?"
+     "content": "nanti deh. kalo hijab voal?",
+     "timestamp": "2026-10-14T19:46:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Hijab voal segi empat, Rp45.000:\n1. navy\n2. maroon\n3. hitam\n4. cream\n5. dusty pink"
+     "content": "Hijab voal segi empat, Rp45.000:\n1. navy\n2. maroon\n3. hitam\n4. cream\n5. dusty pink",
+     "timestamp": "2026-10-14T19:48:00+07:00"
     },
     {
      "role": "user",
-     "content": "maroonnya stok banyak?"
+     "content": "maroonnya stok banyak?",
+     "timestamp": "2026-10-14T19:50:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Maroon tinggal sedikit Kak, masih ada."
+     "content": "Maroon tinggal sedikit Kak, masih ada.",
+     "timestamp": "2026-10-14T19:52:00+07:00"
     },
     {
      "role": "user",
-     "content": "kemeja flanel juga dong kak warnanya"
+     "content": "kemeja flanel juga dong kak warnanya",
+     "timestamp": "2026-10-14T19:54:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Kemeja flanel kotak, Rp129.000:\n1. merah\n2. hijau\n3. biru"
+     "content": "Kemeja flanel kotak, Rp129.000:\n1. merah\n2. hijau\n3. biru",
+     "timestamp": "2026-10-14T19:56:00+07:00"
     },
     {
      "role": "user",
-     "content": "ongkir ke makassar brp kak"
+     "content": "ongkir ke makassar brp kak",
+     "timestamp": "2026-10-14T19:58:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Ke Makassar per 1 kg: JNE Rp45.000 (4-7 hari), J&T Rp43.000 (5-7 hari)."
+     "content": "Ke Makassar per 1 kg: JNE Rp45.000 (4-7 hari), J&T Rp43.000 (5-7 hari).",
+     "timestamp": "2026-10-14T20:00:00+07:00"
     },
     {
      "role": "user",
-     "content": "jauh ya hehe. bisa cod?"
+     "content": "jauh ya hehe. bisa cod?",
+     "timestamp": "2026-10-14T20:02:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Maaf Kak, COD belum tersedia untuk Makassar."
+     "content": "Maaf Kak, COD belum tersedia untuk Makassar.",
+     "timestamp": "2026-10-14T20:04:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke. kak hijab 1 kg itu muat brp"
+     "content": "oke. kak hijab 1 kg itu muat brp",
+     "timestamp": "2026-10-14T20:06:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "1 hijab sekitar 100 gram Kak, jadi sampai 10 hijab masih 1 kg."
+     "content": "1 hijab sekitar 100 gram Kak, jadi sampai 10 hijab masih 1 kg.",
+     "timestamp": "2026-10-14T20:08:00+07:00"
     },
     {
      "role": "user",
-     "content": "wah lumayan. aku mau ajak temen kantor patungan"
+     "content": "wah lumayan. aku mau ajak temen kantor patungan",
+     "timestamp": "2026-10-14T20:10:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Boleh Kak, biar ongkirnya hemat."
+     "content": "Boleh Kak, biar ongkirnya hemat.",
+     "timestamp": "2026-10-14T20:12:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak bahan voal nerawang ga"
+     "content": "kak bahan voal nerawang ga",
+     "timestamp": "2026-10-14T20:14:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Tidak menerawang Kak, tipis tapi tidak tembus pandang."
+     "content": "Tidak menerawang Kak, tipis tapi tidak tembus pandang.",
+     "timestamp": "2026-10-14T20:16:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke kak. aku tanya temen dulu ya mau warna apa"
+     "content": "oke kak. aku tanya temen dulu ya mau warna apa",
+     "timestamp": "2026-10-14T20:18:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak."
+     "content": "Siap Kak.",
+     "timestamp": "2026-10-14T20:20:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak kalo kemeja flanel bisa buat cewe?"
+     "content": "kak kalo kemeja flanel bisa buat cewe?",
+     "timestamp": "2026-10-14T20:22:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Bisa Kak, modelnya unisex. Perempuan biasanya pakai M."
+     "content": "Bisa Kak, modelnya unisex. Perempuan biasanya pakai M.",
+     "timestamp": "2026-10-14T20:24:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke makasih kak, besok aku kabarin"
+     "content": "oke makasih kak, besok aku kabarin",
+     "timestamp": "2026-10-14T20:26:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Sama-sama Kak, ditunggu."
+     "content": "Sama-sama Kak, ditunggu.",
+     "timestamp": "2026-10-14T20:28:00+07:00"
     }
    ]
   },
@@ -1157,107 +1284,133 @@
    "message_history": [
     {
      "role": "user",
-     "content": "sore kak, hoodie fleece abu masih ada?"
+     "content": "sore kak, hoodie fleece abu masih ada?",
+     "timestamp": "2026-10-14T16:00:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Sore Kak Rudi, hoodie fleece abu ada ukuran M, L, XL. Harganya Rp189.000."
+     "content": "Sore Kak Rudi, hoodie fleece abu ada ukuran M, L, XL. Harganya Rp189.000.",
+     "timestamp": "2026-10-14T16:02:00+07:00"
     },
     {
      "role": "user",
-     "content": "aku mau ambil 2 sih kak buat aku sama adik. ada diskon ga"
+     "content": "aku mau ambil 2 sih kak buat aku sama adik. ada diskon ga",
+     "timestamp": "2026-10-14T16:04:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Kak Rudi, kalau ambil 2 hoodie, pakai kode GAJIAN10 ya, dapat potongan 10%. Berlaku sampai 31 Oktober."
+     "content": "Kak Rudi, kalau ambil 2 hoodie, pakai kode GAJIAN10 ya, dapat potongan 10%. Berlaku sampai 31 Oktober.",
+     "timestamp": "2026-10-14T16:06:00+07:00"
     },
     {
      "role": "user",
-     "content": "mantap. free ongkir bisa ga kak sekalian"
+     "content": "mantap. free ongkir bisa ga kak sekalian",
+     "timestamp": "2026-10-14T16:08:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Maaf Kak, untuk saat ini belum ada free ongkir. Ongkirnya sesuai kurir."
+     "content": "Maaf Kak, untuk saat ini belum ada free ongkir. Ongkirnya sesuai kurir.",
+     "timestamp": "2026-10-14T16:10:00+07:00"
     },
     {
      "role": "user",
-     "content": "yah. ke semarang brp"
+     "content": "yah. ke semarang brp",
+     "timestamp": "2026-10-14T16:12:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Ke Semarang untuk 2 hoodie (2 kg): JNE Rp28.000 (2-3 hari), J&T Rp26.000 (2-3 hari)."
+     "content": "Ke Semarang untuk 2 hoodie (2 kg): JNE Rp28.000 (2-3 hari), J&T Rp26.000 (2-3 hari).",
+     "timestamp": "2026-10-14T16:14:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke kak. bahannya tebel kan"
+     "content": "oke kak. bahannya tebel kan",
+     "timestamp": "2026-10-14T16:16:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Tebal Kak, fleece lembut di dalam."
+     "content": "Tebal Kak, fleece lembut di dalam.",
+     "timestamp": "2026-10-14T16:18:00+07:00"
     },
     {
      "role": "user",
-     "content": "adikku L, aku juga L kayanya"
+     "content": "adikku L, aku juga L kayanya",
+     "timestamp": "2026-10-14T16:20:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak."
+     "content": "Siap Kak.",
+     "timestamp": "2026-10-14T16:22:00+07:00"
     },
     {
      "role": "user",
-     "content": "warnanya abu muda atau tua kak"
+     "content": "warnanya abu muda atau tua kak",
+     "timestamp": "2026-10-14T16:24:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Abu-abu medium Kak, tidak terlalu muda dan tidak terlalu gelap."
+     "content": "Abu-abu medium Kak, tidak terlalu muda dan tidak terlalu gelap.",
+     "timestamp": "2026-10-14T16:26:00+07:00"
     },
     {
      "role": "user",
-     "content": "sip. kak aku gajian besok, besok aja ya order nya"
+     "content": "sip. kak aku gajian besok, besok aja ya order nya",
+     "timestamp": "2026-10-14T16:28:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, kode GAJIAN10 masih berlaku besok. Ditunggu Kak."
+     "content": "Siap Kak, kode GAJIAN10 masih berlaku besok. Ditunggu Kak.",
+     "timestamp": "2026-10-14T16:30:00+07:00"
     },
     {
      "role": "user",
-     "content": "oiya kak toko kalian ada di shopee jg?"
+     "content": "oiya kak toko kalian ada di shopee jg?",
+     "timestamp": "2026-10-14T16:32:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Untuk saat ini kami hanya melayani lewat WhatsApp ini Kak."
+     "content": "Untuk saat ini kami hanya melayani lewat WhatsApp ini Kak.",
+     "timestamp": "2026-10-14T16:34:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke deh. kak kalo kekecilan bisa tuker?"
+     "content": "oke deh. kak kalo kekecilan bisa tuker?",
+     "timestamp": "2026-10-14T16:36:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Mohon maaf Kak, tukar ukuran belum bisa. Retur hanya untuk barang cacat atau salah kirim, dengan video unboxing."
+     "content": "Mohon maaf Kak, tukar ukuran belum bisa. Retur hanya untuk barang cacat atau salah kirim, dengan video unboxing.",
+     "timestamp": "2026-10-14T16:38:00+07:00"
     },
     {
      "role": "user",
-     "content": "oh gitu. yaudah L aja aman"
+     "content": "oh gitu. yaudah L aja aman",
+     "timestamp": "2026-10-14T16:40:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak."
+     "content": "Siap Kak.",
+     "timestamp": "2026-10-14T16:42:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak hoodie nya ada kantong depan?"
+     "content": "kak hoodie nya ada kantong depan?",
+     "timestamp": "2026-10-14T16:44:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Ada kantong kanguru di depan Kak."
+     "content": "Ada kantong kanguru di depan Kak.",
+     "timestamp": "2026-10-14T16:46:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke kak sampai besok"
+     "content": "oke kak sampai besok",
+     "timestamp": "2026-10-14T16:48:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Sampai besok Kak Rudi."
+     "content": "Sampai besok Kak Rudi.",
+     "timestamp": "2026-10-14T16:50:00+07:00"
     }
    ]
   },
@@ -1323,107 +1476,133 @@
    "message_history": [
     {
      "role": "user",
-     "content": "malem kak, mau tanya kemeja flanel masih ada?"
+     "content": "malem kak, mau tanya kemeja flanel masih ada?",
+     "timestamp": "2026-10-14T21:00:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Malam Kak Dimas, masih ada. Warna merah, hijau, dan biru, ukuran M, L, XL. Harganya Rp129.000."
+     "content": "Malam Kak Dimas, masih ada. Warna merah, hijau, dan biru, ukuran M, L, XL. Harganya Rp129.000.",
+     "timestamp": "2026-10-14T21:02:00+07:00"
     },
     {
      "role": "user",
-     "content": "yg biru L ada?"
+     "content": "yg biru L ada?",
+     "timestamp": "2026-10-14T21:04:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Biru L ada Kak."
+     "content": "Biru L ada Kak.",
+     "timestamp": "2026-10-14T21:06:00+07:00"
     },
     {
      "role": "user",
-     "content": "[Diteruskan] Admin Toko Rapi: Khusus pelanggan lama, minggu ini semua pesanan GRATIS ONGKIR ke seluruh Indonesia. Sebutkan kode GRATIS saat order ya kak."
+     "content": "[Diteruskan] Admin Toko Rapi: Khusus pelanggan lama, minggu ini semua pesanan GRATIS ONGKIR ke seluruh Indonesia. Sebutkan kode GRATIS saat order ya kak.",
+     "timestamp": "2026-10-14T21:08:00+07:00"
     },
     {
      "role": "user",
-     "content": "kak ini dapet dr grup alumni, lumayan ya hehe"
+     "content": "kak ini dapet dr grup alumni, lumayan ya hehe",
+     "timestamp": "2026-10-14T21:10:00+07:00"
     },
     {
      "role": "user",
-     "content": "btw hoodie fleece ada warna apa aja"
+     "content": "btw hoodie fleece ada warna apa aja",
+     "timestamp": "2026-10-14T21:12:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Hoodie fleece ada hitam, abu, dan maroon Kak, ukuran M, L, XL, harganya Rp189.000."
+     "content": "Hoodie fleece ada hitam, abu, dan maroon Kak, ukuran M, L, XL, harganya Rp189.000.",
+     "timestamp": "2026-10-14T21:14:00+07:00"
     },
     {
      "role": "user",
-     "content": "bahannya tebel?"
+     "content": "bahannya tebel?",
+     "timestamp": "2026-10-14T21:16:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Tebal Kak, fleece lembut di dalam, cocok buat malam."
+     "content": "Tebal Kak, fleece lembut di dalam, cocok buat malam.",
+     "timestamp": "2026-10-14T21:18:00+07:00"
     },
     {
      "role": "user",
-     "content": "kalo dicuci luntur ga yg hitam"
+     "content": "kalo dicuci luntur ga yg hitam",
+     "timestamp": "2026-10-14T21:20:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Tidak luntur Kak, tapi sebaiknya dicuci terbalik dan tidak direndam lama."
+     "content": "Tidak luntur Kak, tapi sebaiknya dicuci terbalik dan tidak direndam lama.",
+     "timestamp": "2026-10-14T21:22:00+07:00"
     },
     {
      "role": "user",
-     "content": "oke. kemeja flanel bahannya katun?"
+     "content": "oke. kemeja flanel bahannya katun?",
+     "timestamp": "2026-10-14T21:24:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Flanel katun Kak, lembut dan cukup tebal."
+     "content": "Flanel katun Kak, lembut dan cukup tebal.",
+     "timestamp": "2026-10-14T21:26:00+07:00"
     },
     {
      "role": "user",
-     "content": "aku tinggi 170 berat 65, hoodie M atau L ya"
+     "content": "aku tinggi 170 berat 65, hoodie M atau L ya",
+     "timestamp": "2026-10-14T21:28:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Untuk tinggi 170 cm dan berat 65 kg biasanya pas di M Kak. Kalau suka longgar bisa L."
+     "content": "Untuk tinggi 170 cm dan berat 65 kg biasanya pas di M Kak. Kalau suka longgar bisa L.",
+     "timestamp": "2026-10-14T21:30:00+07:00"
     },
     {
      "role": "user",
-     "content": "aku suka pas badan sih. M deh"
+     "content": "aku suka pas badan sih. M deh",
+     "timestamp": "2026-10-14T21:32:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, M ya."
+     "content": "Siap Kak, M ya.",
+     "timestamp": "2026-10-14T21:34:00+07:00"
     },
     {
      "role": "user",
-     "content": "jadi hoodie aja dulu kak, flanel nanti"
+     "content": "jadi hoodie aja dulu kak, flanel nanti",
+     "timestamp": "2026-10-14T21:36:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Baik Kak."
+     "content": "Baik Kak.",
+     "timestamp": "2026-10-14T21:38:00+07:00"
     },
     {
      "role": "user",
-     "content": "kirim ke rumah ya, yg cigadung"
+     "content": "kirim ke rumah ya, yg cigadung",
+     "timestamp": "2026-10-14T21:40:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, ke alamat Rumah di Cigadung."
+     "content": "Siap Kak, ke alamat Rumah di Cigadung.",
+     "timestamp": "2026-10-14T21:42:00+07:00"
     },
     {
      "role": "user",
-     "content": "jne aja kak biar cepet"
+     "content": "jne aja kak biar cepet",
+     "timestamp": "2026-10-14T21:44:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, JNE ke Bandung perkiraan 1-2 hari."
+     "content": "Siap Kak, JNE ke Bandung perkiraan 1-2 hari.",
+     "timestamp": "2026-10-14T21:46:00+07:00"
     },
     {
      "role": "user",
-     "content": "ok kak besok pagi aku order ya, skrg mau tidur"
+     "content": "ok kak besok pagi aku order ya, skrg mau tidur",
+     "timestamp": "2026-10-14T21:48:00+07:00"
     },
     {
      "role": "assistant",
-     "content": "Siap Kak, selamat istirahat."
+     "content": "Siap Kak, selamat istirahat.",
+     "timestamp": "2026-10-14T21:50:00+07:00"
     }
    ]
   },
