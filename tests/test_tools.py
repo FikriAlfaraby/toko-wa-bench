@@ -192,3 +192,12 @@ def test_the_seeded_orders_follow_the_rules(shop):
         assert order.total == subtotal - order.discount + order.shipment.shipping_cost + order.unique_code
         if order.paid_transfer_id:
             assert shop.db.transfers[order.paid_transfer_id].amount == order.total
+
+
+def test_a_hand_off_is_recorded_with_its_order_and_reason_only(shop):
+    shop.transfer_to_admin("paket bermasalah", "tertahan di gateway sejak 11 Okt", "ORD-1003")
+    assert [h.model_dump() for h in shop.db.handoffs] == [
+        {"order_id": "ORD-1003", "reason": "paket bermasalah"}
+    ]
+    with pytest.raises(ValueError, match="not found"):
+        shop.transfer_to_admin("lainnya", "x", "ORD-9999")

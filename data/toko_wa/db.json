@@ -1637,5 +1637,6 @@
    "min_purchase": 100000,
    "valid_until": "2026-10-10"
   }
- }
+ },
+ "handoffs": []
 }

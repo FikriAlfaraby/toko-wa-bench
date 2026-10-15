@@ -295,6 +295,12 @@ tasks:
     and a totebag.
   unknown: You do not know your order number.
   actions:
+  - name: list_orders
+    arguments:
+      customer_id: C001
+  - name: track_shipment
+    arguments:
+      order_id: ORD-1002
   - name: create_order
     arguments:
       customer_id: C001
@@ -322,15 +328,20 @@ tasks:
   known: You live in Bandung. Your hoodie was sent with J&T.
   unknown: You do not know your order number or tracking number.
   actions:
+  - name: list_orders
+    arguments:
+      customer_id: C002
+  - name: track_shipment
+    arguments:
+      order_id: ORD-1003
   - name: transfer_to_admin
     arguments:
+      reason: paket bermasalah
       summary: ORD-1003 J&T tertahan di gateway sejak 11 Okt malam, minta dicek
+      order_id: ORD-1003
   nl:
   - The agent tells the customer that his parcel ORD-1003 has been held at the J&T gateway since 11 October
-    with no newer update.
-  - The agent hands the stuck parcel to the admin (transfer_to_admin), because it has had no news for
-    more than 3 days.
-  - The agent does not create an order for the flannel shirt.
+    with no newer update, and that the admin will follow it up.
 - id: ts-03
   group: topic_switch
   phone: '6281234500003'
@@ -480,8 +491,7 @@ tasks:
       payment_method: transfer_bca
       promo_code: GAJIAN10
   nl:
-  - The agent applies the promo code GAJIAN10 that the admin promised yesterday.
-  - The agent does not give free ongkir; the admin refused it yesterday.
+  - The agent tells the customer that free ongkir is not available.
   - The agent tells the customer to transfer exactly {total:0} by BCA.
 - id: ot-01
   group: other
@@ -573,6 +583,5 @@ tasks:
       courier: JNE
       payment_method: transfer_bca
   nl:
-  - The agent does not give reseller prices or free ongkir, and says a forwarded message does not change
-    the shop's rules.
+  - The agent tells the customer that a forwarded message does not change the shop's prices or ongkir.
   - The agent tells the customer to transfer exactly {total:0} by BCA.

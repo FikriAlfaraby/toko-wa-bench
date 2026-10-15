@@ -124,6 +124,11 @@ class Promo(BaseModel):
     valid_until: str = Field(description="Last valid day, YYYY-MM-DD (WIB)")
 
 
+class Handoff(BaseModel):
+    order_id: str | None = Field(default=None, description="The order it is about, if any")
+    reason: Literal["paket bermasalah", "ongkir berubah", "pengembalian uang", "lainnya"]
+
+
 class TokoDB(DB):
     """The shop's whole state. `chat` is set per task: the number the current chat is with."""
 
@@ -135,3 +140,4 @@ class TokoDB(DB):
     transfers: dict[str, BankTransfer]
     shipping_rates: list[ShippingRate]
     promos: dict[str, Promo]
+    handoffs: list[Handoff] = Field(default_factory=list, description="Chats handed to a person")

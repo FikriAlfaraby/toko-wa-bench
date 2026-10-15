@@ -10,7 +10,17 @@ from typing import Literal
 from pydantic import BaseModel
 from tau2.environment.toolkit import ToolKitBase, ToolType, is_tool
 
-from toko_wa.data_model import Address, Customer, Order, OrderItem, Product, ReturnRequest, Shipment, TokoDB
+from toko_wa.data_model import (
+    Address,
+    Customer,
+    Handoff,
+    Order,
+    OrderItem,
+    Product,
+    ReturnRequest,
+    Shipment,
+    TokoDB,
+)
 
 COD_LIMIT = 1_000_000
 RETURN_WINDOW = timedelta(hours=72)
@@ -554,16 +564,26 @@ class TokoTools(ToolKitBase):
             raise ValueError("Only numbers and + - * / ( ) are allowed")
         return str(round(float(eval(expression, {"__builtins__": None}, {})), 2))
 
-    @is_tool(ToolType.GENERIC)
-    def transfer_to_admin(self, summary: str) -> str:
-        """Hand the chat to a person, for what the tools cannot do: a lost parcel, a paid order whose
-        ongkir would change, a refund question. Write a short summary for the admin. It changes no
-        data: the summary is free text, so the database stays comparable with the expected one.
+    @is_tool(ToolType.WRITE)
+    def transfer_to_admin(
+        self,
+        reason: Literal["paket bermasalah", "ongkir berubah", "pengembalian uang", "lainnya"],
+        summary: str,
+        order_id: str | None = None,
+    ) -> str:
+        """Hand the chat to a person, for what the tools cannot do: a lost or stuck parcel, a paid order
+        whose ongkir would change, a refund question. Tell the customer what you found first.
 
         Args:
-            summary: What the customer needs and what was already done.
+            reason: 'paket bermasalah', 'ongkir berubah', 'pengembalian uang' or 'lainnya'.
+            summary: A short note for the admin: what the customer needs and what was already done.
+            order_id: The order it is about, if any.
 
         Returns:
             str: Confirmation.
         """
+        if order_id is not None:
+            self._order(order_id)
+        # the free-text summary is for the person; the record keeps only what can be compared
+        self.db.handoffs.append(Handoff(order_id=order_id, reason=reason))
         return "Transfer successful"

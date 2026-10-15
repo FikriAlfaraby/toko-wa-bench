@@ -24,6 +24,7 @@ WRITES = {
     "add_address",
     "cancel_order",
     "request_return",
+    "transfer_to_admin",
 }
 
 
