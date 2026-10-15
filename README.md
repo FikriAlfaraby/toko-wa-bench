@@ -50,7 +50,8 @@ more. (6) Gemini at least as good as Luna with the whole chat: held.
 
 ### Reading every failure
 
-53 of the 312 conversations failed. 19 lost a detail through the strategy and 3 were laundered by
+53 of the 312 conversations failed; each is in `review/2026-10-15.json` with its cause and a quote
+that tests check against the recorded conversation. 19 lost a detail through the strategy and 3 were laundered by
 a note; 22 were agent mistakes with nothing to do with context (Gemini told the customer her parcel
 would arrive "hari ini atau besok", which the tracking does not say, in 7 runs of ts-01; Luna handed
 parcels that were on time to the admin; Luna did not take the Sundanese "muhun" as a yes); 7 were
