@@ -24,10 +24,9 @@ def test_every_gloss_passes_the_checks():
     assert not failing
 
 
-def test_only_lines_already_in_english_or_machine_text_go_without_a_gloss():
+def test_a_line_has_a_gloss_exactly_when_it_has_indonesian_in_it():
     for line, gloss in GLOSSES.items():
-        if gloss is None:
-            assert not is_indonesian(line), line
+        assert (gloss is None) == (not is_indonesian(line, KEEP)), line
 
 
 @pytest.mark.parametrize(
@@ -48,6 +47,21 @@ def test_only_lines_already_in_english_or_machine_text_go_without_a_gloss():
         ('{"message": "Halo Kak, ada yang bisa dibantu?"}', "Hi, how can I help?", "a JSON object"),
         ("Pesanan sudah dibuat dan besok pagi dikirim lewat JNE ke alamat Kakak.", "Done.", "is 5 chara"),
         ("Halo Kak, ada yang bisa dibantu?", None, "the line is Indonesian but has no gloss"),
+        ('{"phone":"6281234500002"}', '{"phone":"6281234500002"}', "it needs no gloss"),
+        # a wrong amount must not pass because its digits start the same
+        ("dapat potongan 10% ya", "you get 100% off", "the gloss adds the number 100"),
+        ("mau 2 hoodie ya kak", "I want 20 hoodies.", "the gloss adds the number 20"),
+        ("Ongkir ke Bandung Rp18.000 ya", "Shipping to Bandung is Rp180.000.", "the number 18000 is missing"),
+        ("udh tf 227rb ya", "I've transferred 227 million.", "the number 227000 is missing"),
+        ("transfer 1,5jt ya", "transfer 15 million", "the number 1500000 is missing"),
+        ("Pesanan ORD-1010 sudah dibayar.", "Order ORD-10100 is paid.", "ORD-1010 is missing"),
+        ("Pesanan:\n- 2 kaos\n- 1 hoodie", "Order: 2 T-shirts, 1 hoodie", "line breaks"),
+        (
+            "Baik Kak, pesanan ORD-1003 sudah saya cek, paketnya tertahan di gudang J&T Bandung "
+            "sejak tanggal 11.",
+            "Okay, I checked ORD-1003 at J&T Bandung on the 11th.",
+            "characters for a line of",
+        ),
     ],
 )
 def test_each_kind_of_wrong_gloss_is_caught(line, gloss, problem):
@@ -64,6 +78,11 @@ def test_each_kind_of_wrong_gloss_is_caught(line, gloss, problem):
         ("jam 10.00 ya kak", "At 10:00, please."),
         ('{"message": "Halo Kak, ada yang bisa dibantu?"}', '{"message": "Hi, how can I help?"}'),
         ('{"phone":"6281234500002"}', None),
+        ("Ongkir Rp2.000 ya kak", "Shipping is Rp2.000."),
+        ("hoodie x2 ya kak", "Hoodie x2, please."),
+        ("Pesanan ORD-1003 dikirim ke alamat C007-A1 ya.", "Order ORD-1003 will be sent to address C007-A1."),
+        # a capitalised English name is not an Indonesian word
+        ("Kirim ke Dan ya kak", "Send it to Dan, please."),
     ],
 )
 def test_a_right_gloss_passes(line, gloss):
@@ -90,6 +109,19 @@ def test_the_lines_the_findings_rest_on_say_in_english_what_they_say_in_indonesi
     for line, gloss in GLOSSES.items():
         if "janji atau penolakan toko:" in line:
             assert "shop's promise or refusal" in gloss.replace("’", "'"), gloss
+
+
+def test_the_phrases_the_first_translation_misread_now_read_right():
+    for line, gloss in GLOSSES.items():
+        low = (gloss or "").lower()
+        if re.search(r"abu(-abu)? medium", line, re.I):
+            assert re.search(r"medium[- ]gr[ae]y", low), gloss
+        if re.search(r"teruskan .{0,12}ke admin", line, re.I):
+            assert "check with" not in low and re.search(r"\b(pass|forward|hand|refer|escalat)", low), gloss
+        if "detailnya sesuai" in line:
+            assert "detail" in low, gloss
+        if re.search(r"\bkira-kira bisa", line, re.I):
+            assert "approximately" not in low, gloss
 
 
 def test_every_gloss_edited_by_hand_says_why_and_still_passes():

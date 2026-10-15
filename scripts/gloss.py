@@ -24,23 +24,31 @@ from toko_wa.paths import DB_PATH
 SYSTEM = """You translate lines from WhatsApp chats between customers and Toko Rapi Bandung, a small
 clothing shop in Bandung, Indonesia, into English for readers who do not speak Indonesian. The lines
 were written by customers, by the shop's admin and by AI agents serving the shop, and include the
-agents' own notes. Many are informal WhatsApp Indonesian with abbreviations (yg = yang, udh/sdh =
+agents' own notes, the text the agents passed to the shop's tools, and what the tools returned.
+Many are informal WhatsApp Indonesian with abbreviations (yg = yang, udh/sdh =
 sudah, blm = belum, tf = transfer, kmrn = kemarin, dr = dari, jd = jadi, gk/ga/gak = tidak,
 rb = ribu, jt = juta, pcs = pieces); some are Sundanese or Javanese.
 
 Translate each line into natural English that says exactly what the line says: the same facts,
-requests and tone (casual stays casual). Do not add, explain or leave out anything.
+requests and tone (casual stays casual). Do not add, explain or leave out anything: a short
+confirmation inside a line ("detailnya sesuai", the details are right) stays in the English.
 
 Words of this shop:
 - "item" next to a colour or a product means black (slang for hitam); "abu" or "abu-abu" is grey.
 - ongkir = shipping cost; resi = tracking number; rekening = bank account; mutasi = bank statement;
-  kode unik = unique code (the few rupiah added to a transfer so the shop can match it);
+  kode unik = unique code (the three digits, 100 to 999 rupiah, added to a transfer total so the
+  shop can match it);
   COD = cash on delivery; admin = the shop's admin.
 - kak, ka, kakak, mas, mbak, bu, pak are polite forms of address: leave them out, but keep a name
   that follows them.
 - [gambar] means the customer sent a picture: write [image].
-- A 2 written after a word repeats the word, it is not the number two: tanya2 = tanya-tanya (ask
-  around), liat2 = look around, pikir2 = think it over, kotak2 = checked (the pattern).
+- A 2 written after a word repeats the word, it is not the number two: tanya2 = tanya-tanya (ask a
+  few things), liat2 = look around, pikir2 = think it over, kotak2 = checked (the pattern).
+- abu-abu medium or abu medium is a shade, medium grey; it is not a size.
+- teruskan ke admin means pass it on to the admin (a hand-off), not check with the admin.
+- kira-kira at the start of a request softens it (could you perhaps ...); there it does not mean
+  approximately.
+- A month or a day keeps its English name: Oktober = October, Sabtu = Saturday; pukul = at.
 - wkwk is laughter (lol); hehe stays hehe.
 - The agents' fact notes use fixed labels; always translate them the same way: pesanan = order;
   alamat atau tujuan = address or destination; kurir = courier; pembayaran = payment; koreksi =

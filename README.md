@@ -5,7 +5,7 @@ and a measurement of what an agent forgets when a long chat is compacted.**
 
 Recorded 15 October 2026: 312 conversations, all in `runs/`. Replay any of them, with what the agent
 was given and why each failure failed: [fikrialfaraby.com/toko](https://fikrialfaraby.com/toko/). The chats are in Indonesian; the
-replay shows an English line under each one. The predictions were tagged on GitHub before any model
+replay shows an English line under each line. The predictions were tagged on GitHub before any model
 ran the experiment.
 
 ## Results
@@ -87,8 +87,8 @@ customer-service agents: a simulated customer, a written policy, tools that chan
 a check of the database at the end. [SEATauBench](https://github.com/SEACrowd/SEATauBench) (Findings
 of EMNLP 2026) translated its airline, retail and telecom tasks into Indonesian and four other
 Southeast Asian languages. This domain is not a translation: it is a small Bandung clothing shop
-with Rupiah prices, transfers with a kode unik (a few rupiah added to each total so the transfer
-can be matched), COD by city, ongkir (shipping) per started kilogram, and
+with Rupiah prices, transfers with a kode unik (a three-digit code, 100 to 999 rupiah, added to
+each total so the transfer can be matched), COD by city, ongkir (shipping) per started kilogram, and
 chats written the way people write on WhatsApp. None of tau-bench's 2,449 retail, airline and
 telecom tasks starts with an earlier chat history; five of these do.
 
@@ -105,9 +105,15 @@ telecom tasks starts with an earlier chat history; five of these do.
   task's reference actions on a fresh shop and fills in every Rupiah amount an assertion quotes,
   so no total is computed by hand.
 - It plugs into tau-bench through its registry; tau-bench itself is not changed.
-- `data/glosses-en.json`: an English line for every Indonesian line the replay shows, written by
-  GPT-6 Luna (`scripts/gloss.py`) and checked by `tests/test_glosses.py`: no Indonesian left, every
-  number, ID, code and name kept. The agents saw only the originals; nothing in the domain reads it.
+- `data/glosses-en.json`: an English line for every Indonesian line the replay shows. That covers
+  the chat, the notes, the text the agents passed to tools and what the tools returned. GPT-6 Luna
+  wrote the English (`scripts/gloss.py`), and `tests/test_glosses.py` checks it. The check finds
+  Indonesian left in the English. It also finds a number that changed with its unit, and a changed
+  order, item or promo code. A name in the shop's data that went missing is caught too. It cannot
+  tell which item a number belongs to, or whether a place outside the shop's data was changed. The
+  lines a finding rests on were therefore read and pinned by hand. One translation was corrected by
+  hand, and the file says why. The agents saw only the originals, and nothing in the domain reads
+  this file.
 
 ## The tasks
 
