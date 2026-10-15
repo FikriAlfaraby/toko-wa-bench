@@ -3,7 +3,8 @@
 **An Indonesian WhatsApp-shop domain for [tau-bench](https://github.com/sierra-research/tau2-bench),
 and a measurement of what an agent forgets when a long chat is compacted.**
 
-Recorded 15 October 2026: 312 conversations, all in `runs/`. The predictions were tagged on GitHub
+Recorded 15 October 2026: 312 conversations, all in `runs/`. Replay any of them, with what the agent
+was given and why each failure failed: [fikrialfaraby.com/toko](https://fikrialfaraby.com/toko/). The predictions were tagged on GitHub
 before any model ran the experiment.
 
 ## Results
